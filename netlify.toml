@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+# תוכן שנערך בממשק הניהול יופיע מיד, בלי זיכרון מטמון ישן
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"

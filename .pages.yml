@@ -1,0 +1,166 @@
+# הגדרות ממשק הניהול Pages CMS (https://app.pagescms.org)
+media:
+  input: images
+  output: /images
+
+content:
+  # ---------------------------------------------------------------
+  - name: general
+    label: "ראשי: פתיח, אודות, תרומות וצור קשר"
+    type: file
+    format: json
+    path: content/general.json
+    fields:
+      - name: hero
+        label: חלק עליון (פתיח)
+        type: object
+        fields:
+          - { name: title, label: כותרת ראשית, type: string }
+          - { name: subtitle, label: כותרת משנה, type: string }
+          - { name: dedication, label: שורת הקדשה, type: string }
+          - { name: image, label: תמונת רקע (רוחבית), type: image }
+          - { name: donate_button, label: טקסט כפתור תרומה, type: string }
+          - { name: about_button, label: טקסט כפתור אודות, type: string }
+      - name: about
+        label: אודות הכולל
+        type: object
+        fields:
+          - { name: title, label: כותרת, type: string }
+          - name: body
+            label: טקסט
+            description: "שורה ריקה = פסקה חדשה. להדגשה: **מילה מודגשת**"
+            type: text
+          - { name: image, label: תמונה (אנכית), type: image }
+          - name: highlights
+            label: תיבות קצרות מתחת לטקסט
+            type: object
+            list: true
+            fields:
+              - { name: title, label: כותרת, type: string }
+              - { name: text, label: טקסט, type: string }
+      - name: donate
+        label: תרומות
+        type: object
+        fields:
+          - name: url
+            label: קישור לדף התרומות
+            description: "הכתובת המלאה של דף התרומות, מתחילה ב-https://"
+            type: string
+          - { name: verse, label: פסוק, type: string }
+          - { name: verse_source, label: מקור הפסוק, type: string }
+          - { name: title, label: כותרת, type: string }
+          - { name: text, label: טקסט, type: text }
+          - { name: button, label: טקסט הכפתור, type: string }
+      - name: contact
+        label: צור קשר
+        type: object
+        fields:
+          - { name: title, label: כותרת, type: string }
+          - { name: address, label: כתובת, type: string }
+          - { name: phone, label: טלפון, type: string }
+          - { name: email, label: אימייל (לא חובה), type: string }
+          - name: map_query
+            label: חיפוש במפה
+            description: "הכתובת שתוצג במפת Google"
+            type: string
+      - name: footer
+        label: שורה תחתונה
+        type: object
+        fields:
+          - { name: registration, label: מספר עמותה, type: string }
+
+  # ---------------------------------------------------------------
+  - name: news
+    label: חדשות ועדכונים
+    type: file
+    format: json
+    path: content/news.json
+    fields:
+      - { name: title, label: כותרת האזור, type: string }
+      - name: items
+        label: עדכונים
+        description: "העדכונים מוצגים באתר מהחדש לישן לפי התאריך"
+        type: object
+        list:
+          collapsible:
+            summary: "{title}"
+        fields:
+          - { name: title, label: כותרת, type: string, required: true }
+          - { name: date, label: תאריך, type: date }
+          - { name: source, label: מקור (למשל JDN / כיכר השבת), type: string }
+          - { name: summary, label: תקציר, type: text }
+          - name: url
+            label: קישור לכתבה (לא חובה)
+            type: string
+          - { name: image, label: תמונה (לא חובה), type: image }
+
+  # ---------------------------------------------------------------
+  - name: gallery
+    label: גלריית תמונות
+    type: file
+    format: json
+    path: content/gallery.json
+    fields:
+      - { name: title, label: כותרת האזור, type: string }
+      - name: photos
+        label: תמונות
+        type: object
+        list:
+          collapsible:
+            summary: "{caption}"
+        fields:
+          - { name: image, label: תמונה, type: image, required: true }
+          - { name: caption, label: כיתוב, type: string }
+
+  # ---------------------------------------------------------------
+  - name: rabbis
+    label: רבותינו
+    type: file
+    format: json
+    path: content/rabbis.json
+    fields:
+      - { name: title, label: כותרת האזור, type: string }
+      - { name: intro, label: פתיח, type: text }
+      - name: people
+        label: רבנים
+        type: object
+        list:
+          collapsible:
+            summary: "{name}"
+        fields:
+          - { name: name, label: שם, type: string, required: true }
+          - { name: role, label: תפקיד, type: string }
+          - { name: bio, label: תיאור, type: text }
+          - { name: image, label: תמונה (אנכית), type: image }
+
+  # ---------------------------------------------------------------
+  - name: activities
+    label: תחומי פעילות
+    type: file
+    format: json
+    path: content/activities.json
+    fields:
+      - { name: title, label: כותרת האזור, type: string }
+      - { name: intro, label: פתיח, type: text }
+      - name: items
+        label: תחומים
+        type: object
+        list:
+          collapsible:
+            summary: "{title}"
+        fields:
+          - { name: title, label: כותרת, type: string, required: true }
+          - { name: text, label: תיאור, type: text }
+          - name: icon
+            label: אייקון
+            type: select
+            options:
+              values:
+                - { name: book, label: ספר }
+                - { name: lamp, label: אור / שיעור }
+                - { name: heart, label: לב / חסד }
+                - { name: school, label: חינוך }
+                - { name: people, label: אנשים }
+                - { name: star, label: כוכב }
+                - { name: calendar, label: לוח שנה }
+                - { name: home, label: בית }
