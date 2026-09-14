@@ -6,3 +6,9 @@
   for = "/content/*"
   [headers.values]
     Cache-Control = "no-cache"
+
+# כתובת קצרה לדף פדיון הכפרות: /kapara במקום /kapara.html
+[[redirects]]
+  from = "/kapara"
+  to = "/kapara.html"
+  status = 200
