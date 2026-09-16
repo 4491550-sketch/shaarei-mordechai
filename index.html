@@ -222,7 +222,6 @@
     </button>
     <ul class="menu" id="menu">
       <li><a href="#about">אודות</a></li>
-      <li><a href="#legacy">רבותינו</a></li>
       <li><a href="#activity">פעילות</a></li>
       <li><a href="#news">עדכונים</a></li>
       <li><a href="#gallery">גלריה</a></li>
@@ -267,17 +266,6 @@
   </div>
 </section>
 
-<!-- RABBIS -->
-<section class="legacy" id="legacy">
-  <div class="wrap">
-    <div class="reveal">
-      <span class="eyebrow">רבותינו</span>
-      <h2 class="section-title" data-f="rabbis.title"></h2>
-      <p class="lead" data-f="rabbis.intro"></p>
-    </div>
-    <div class="legacy-grid" id="rabbis-list"></div>
-  </div>
-</section>
 
 <!-- ACTIVITY -->
 <section id="activity">
@@ -424,11 +412,6 @@
     $("#about-image").innerHTML = photo(get(d, "about.image"), get(d, "about.title"));
 
     // Rabbis
-    $("#rabbis-list").innerHTML = list(get(d, "rabbis.people")).map(p => `
-      <article class="person reveal">
-        ${photo(p.image, p.name, "portrait")}
-        <div><h3>${esc(p.name)}</h3>${p.role ? `<p class="role">${esc(p.role)}</p>` : ""}${paragraphs(p.bio)}</div>
-      </article>`).join("");
 
     // Activities
     $("#activities-list").innerHTML = list(get(d, "activities.items")).map(a => `
