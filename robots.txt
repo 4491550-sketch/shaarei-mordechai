@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin
 
-Sitemap: https://shaarei-mordechai.netlify.app/sitemap.xml
+Sitemap: https://shaareimordechai.co.il/sitemap.xml
