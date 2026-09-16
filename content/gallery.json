@@ -1,4 +1,33 @@
 {
   "title": "גלריה",
-  "photos": []
+  "photos": [
+    {
+      "image": "/images/shiur-beit-midrash.jpg",
+      "caption": "שיעור תורה לרבים בבית המדרש"
+    },
+    {
+      "image": "/images/seder-limud-1.jpg",
+      "caption": "סדר לימוד – אברכי הכולל שוקדים על התורה"
+    },
+    {
+      "image": "/images/seder-limud-2.jpg",
+      "caption": "בית המדרש בשעת הלימוד"
+    },
+    {
+      "image": "/images/shiur-rosh-kollel.jpg",
+      "caption": "שיעור מפי ראש הכולל"
+    },
+    {
+      "image": "/images/avrechim-limud.jpg",
+      "caption": "אברכים בעיון בסוגיה"
+    },
+    {
+      "image": "/images/tefila-1.jpg",
+      "caption": "תפילה בבית המדרש"
+    },
+    {
+      "image": "/images/tefila-2.jpg",
+      "caption": "בין הסדרים"
+    }
+  ]
 }
