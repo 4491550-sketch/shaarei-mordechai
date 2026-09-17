@@ -151,6 +151,7 @@ content:
         fields:
           - { name: title, label: כותרת, type: string, required: true }
           - { name: text, label: תיאור, type: text }
+          - { name: link, label: "קישור לדף מלא (לא חובה)", type: string }
           - name: icon
             label: אייקון
             type: select
