@@ -68,6 +68,7 @@
   header.site.scrolled{background:rgba(14,28,54,.96);box-shadow:0 4px 20px rgba(0,0,0,.25)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:84px;gap:20px}
   .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+  .card-more{margin:.6em 0 0}.card-more a{color:var(--gold);font-weight:700;text-decoration:none}
   .brand-logo{height:58px;width:auto;flex:none;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
   .brand b{font-family:var(--serif);font-size:1.45rem;display:block;line-height:1.1}
   .brand small{font-size:.8rem;color:var(--gold-light)}
@@ -431,7 +432,7 @@
     $("#activities-list").innerHTML = list(get(d, "activities.items")).map(a => `
       <div class="card reveal">
         <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${ICONS[a.icon] || ICONS.star}</svg></div>
-        <h3>${esc(a.title)}</h3><p>${esc(a.text)}</p>
+        <h3>${esc(a.title)}</h3><p>${esc(a.text)}</p>${a.link ? `<p class="card-more"><a href="${esc(a.link)}">לדף ${esc(a.title)} ‹</a></p>` : ""}
       </div>`).join("");
 
     // News (newest first; items without a date keep their order at the end)
