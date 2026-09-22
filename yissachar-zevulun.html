@@ -172,6 +172,35 @@
   .dlg-x{position:absolute;top:-6px;inset-inline-start:-6px;z-index:3;width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:var(--ink);font-size:1.5rem;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.4)}
   @media(max-width:820px){.cert-grid{grid-template-columns:1fr;gap:30px}.cert{width:min(100%,380px)}}
   @media(prefers-reduced-motion:reduce){.cert{transform:none!important}}
+
+  /* === טופס פרטי שותף (22.9.2026) === */
+  .join-dlg [hidden]{display:none!important}
+  .join-head h2{padding-inline-end:52px}
+  dialog.join-dlg{border:0;padding:0;border-radius:18px;width:min(94vw,560px);max-height:94vh;overflow:auto;background:var(--parchment);color:var(--text);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  dialog.join-dlg::backdrop{background:rgba(6,12,26,.75)}
+  .join-head{background:radial-gradient(ellipse at 50% 0,#1d3561 0,var(--ink) 70%);color:#fff;padding:22px 24px 18px;position:relative}
+  .join-head h2{color:#fff;font-size:1.5rem;margin:0}.join-head h2::after{background:var(--gold-light)}
+  .join-head p{margin:6px 0 0;color:#dfe5f0;font-size:1rem;line-height:1.6}
+  .join-x{position:absolute;top:12px;inset-inline-end:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:1.5rem;cursor:pointer}
+  .join-body{padding:20px 24px 24px}
+  .jf{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+  .jf .full{grid-column:1/-1}
+  .jf label{display:block;font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:4px}
+  .jf label em{font-style:normal;color:#9a3b1f}
+  .jf input{width:100%;font:inherit;font-size:1.05rem;padding:10px 12px;border:2px solid #d9cba8;border-radius:10px;background:#fff;color:var(--ink);min-height:48px}
+  .jf input:focus{border-color:var(--gold)}
+  .jf input[aria-invalid=true]{border-color:#b3261e}
+  .jf .chips{grid-column:1/-1;margin:0}
+  .jf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .jf .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:2px 0 0;line-height:1.6}
+  .jf .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em;font-size:.98rem}
+  .jf .go{grid-column:1/-1;width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:1.1rem;margin-top:4px}
+  .jf .skip-d{grid-column:1/-1;text-align:center;font-size:.95rem;margin:0}
+  .jf .skip-d a{color:var(--muted)}
+  .join-done{text-align:center;padding:10px 4px}
+  .join-done .ok{width:64px;height:64px;border-radius:50%;background:var(--ink);color:var(--gold-light);display:grid;place-items:center;font-size:2rem;margin:0 auto 10px}
+  .join-done h3{font-family:var(--serif);color:var(--ink);font-size:1.4rem;margin:0 0 6px}
+  @media(max-width:520px){.jf{grid-template-columns:1fr}.join-body{padding:18px 16px 20px}}
 </style>
 </head>
 <body>
@@ -312,7 +341,7 @@
             <label><input type="radio" name="certFor" value="לזכות"><span>לזכות</span></label>
             <label><input type="radio" name="certFor" value="לעילוי נשמת"><span>לעילוי נשמת</span></label>
           </fieldset>
-          <p class="hint">התצוגה לדוגמה בלבד – השם אינו נשמר ואינו נשלח לשום מקום.</p>
+          <p class="hint">התצוגה לדוגמה בלבד. השם נשלח לכולל רק אם תמלאו את טופס הפרטים בעת ההצטרפות.</p>
         </div>
         <a class="btn" href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener">להצטרפות וקבלת התעודה<span class="sr-only"> (דף תרומה מאובטח, נפתח בחלון חדש)</span></a>
       </div>
@@ -360,6 +389,94 @@
 })();
 </script>
 
+<dialog class="join-dlg" id="joinDlg" aria-labelledby="joinTitle">
+  <div class="join-head">
+    <h2 id="joinTitle">פרטים למשלוח תעודת השותפות</h2>
+    <p id="joinTier">עוד רגע אתם שותפים. מלאו פרטים כדי שנשלח אליכם את התעודה, ואז נעבור לדף התרומה המאובטח.</p>
+    <button type="button" class="join-x" id="joinX" aria-label="סגירה">×</button>
+  </div>
+  <div class="join-body">
+    <form class="jf" id="joinForm" novalidate>
+      <div class="full"><label for="jCert">השם שיופיע על התעודה <em aria-hidden="true">*</em></label><input id="jCert" name="certName" required maxlength="60" autocomplete="off"></div>
+      <fieldset class="chips">
+        <legend>השותפות היא:</legend>
+        <label><input type="radio" name="certFor" value="על שמי" checked><span>על שמי</span></label>
+        <label><input type="radio" name="certFor" value="לזכות"><span>לזכות</span></label>
+        <label><input type="radio" name="certFor" value="לעילוי נשמת"><span>לעילוי נשמת</span></label>
+      </fieldset>
+      <div class="full"><label for="jName">שם מלא של התורם <em aria-hidden="true">*</em></label><input id="jName" name="fullName" required maxlength="60" autocomplete="name"></div>
+      <div><label for="jPhone">טלפון נייד <em aria-hidden="true">*</em></label><input id="jPhone" name="phone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" dir="ltr"></div>
+      <div><label for="jEmail">דוא״ל</label><input id="jEmail" name="email" type="email" maxlength="80" autocomplete="email" dir="ltr"></div>
+      <div><label for="jStreet">רחוב ומספר בית <em aria-hidden="true">*</em></label><input id="jStreet" name="street" required maxlength="80" autocomplete="address-line1"></div>
+      <div><label for="jCity">עיר <em aria-hidden="true">*</em></label><input id="jCity" name="city" required maxlength="40" autocomplete="address-level2"></div>
+      <div class="hp" aria-hidden="true"><label for="jWeb">אתר</label><input id="jWeb" name="website" tabindex="-1" autocomplete="off"></div>
+      <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי רק למשלוח התעודה וליצירת קשר בענייני השותפות, ואינם מועברים לאחרים.</p>
+      <p class="err" id="joinErr" role="alert"></p>
+      <button type="submit" class="btn go"><span aria-hidden="true">🔒 </span>שליחת הפרטים והמשך לתרומה<span class="sr-only"> (דף התרומה ייפתח בחלון חדש)</span></button>
+      <p class="skip-d"><a href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener" id="joinSkip">דילוג – המשך לתרומה בלי למלא פרטים<span class="sr-only"> (נפתח בחלון חדש)</span></a></p>
+    </form>
+    <div class="join-done" id="joinDone" hidden tabindex="-1">
+      <div class="ok" aria-hidden="true">✓</div>
+      <h3>תודה! הפרטים נקלטו</h3>
+      <p>דף התרומה המאובטח נפתח בחלון חדש. אחרי התרומה נשלח אליכם את תעודת השותפות.</p>
+      <p><a class="btn" href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener">הדף לא נפתח? לחצו כאן לתרומה<span class="sr-only"> (נפתח בחלון חדש)</span></a></p>
+    </div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbxLZ_HjN84ioEnoxgVif-QPasBUeiSLz9_CcRCqWVJPdQtNjNIIsEoXdoQmwQRTvRz4yg/exec';
+  var DONATE='https://www.matara.pro/nedarimplus/online/?mosad=7014763';
+  var dlg=document.getElementById('joinDlg'),form=document.getElementById('joinForm'),done=document.getElementById('joinDone'),
+      err=document.getElementById('joinErr'),tierP=document.getElementById('joinTier'),tier='',opener=null;
+  if(!dlg.showModal)return;
+  var baseTier=tierP.textContent;
+  document.querySelectorAll('a[href*="mosad=7014763"]').forEach(function(a){
+    if(dlg.contains(a))return;
+    a.addEventListener('click',function(e){
+      e.preventDefault();opener=a;
+      var card=a.closest('.card');tier=card&&card.querySelector('h3')?card.querySelector('h3').textContent.trim():'';
+      tierP.textContent=tier?('בחרתם: '+tier+'. '+baseTier):baseTier;
+      var pv=document.getElementById('certInput'),pf=document.querySelector('input[name=certFor]:checked');
+      var jc=document.getElementById('jCert');
+      if(pv&&pv.value.trim()&&!jc.value)jc.value=pv.value.trim();
+      if(pf&&pf.value){var r=form.querySelector('input[name=certFor][value="'+pf.value+'"]');if(r)r.checked=true;}
+      form.hidden=false;done.hidden=true;err.textContent='';
+      dlg.showModal();
+      setTimeout(function(){(jc.value?document.getElementById('jName'):jc).focus()},50);
+    });
+  });
+  function close(){dlg.close();if(opener)opener.focus();}
+  document.getElementById('joinX').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+  document.getElementById('joinSkip').addEventListener('click',function(){setTimeout(function(){dlg.close()},100)});
+  function bad(el,msg){el.setAttribute('aria-invalid','true');err.textContent=msg;el.focus();return false;}
+  function valid(){
+    form.querySelectorAll('[aria-invalid]').forEach(function(x){x.removeAttribute('aria-invalid')});
+    var f=function(id){return document.getElementById(id)};
+    if(!f('jCert').value.trim())return bad(f('jCert'),'נא למלא את השם שיופיע על התעודה');
+    if(!f('jName').value.trim())return bad(f('jName'),'נא למלא שם מלא');
+    var ph=f('jPhone').value.replace(/[\s\-()]/g,'');
+    if(!/^(\+?972|0)5\d{8}$/.test(ph)&&!/^\+?\d{9,15}$/.test(ph))return bad(f('jPhone'),'נא למלא מספר נייד תקין, למשל 050-1234567');
+    var em=f('jEmail').value.trim();
+    if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return bad(f('jEmail'),'כתובת הדוא״ל אינה תקינה');
+    if(!f('jStreet').value.trim())return bad(f('jStreet'),'נא למלא רחוב ומספר בית');
+    if(!f('jCity').value.trim())return bad(f('jCity'),'נא למלא עיר');
+    return true;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!valid())return;
+    var w=window.open(DONATE,'_blank','noopener');
+    var data=new URLSearchParams(new FormData(form));
+    data.append('tier',tier||'כללי');data.append('page',location.pathname);
+    if(ENDPOINT.indexOf('https://')===0){
+      try{fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data,keepalive:true});}catch(x){}
+    }
+    form.hidden=true;done.hidden=false;done.focus();
+  });
+})();
+</script>
 <section aria-labelledby="h-how">
   <div class="wrap">
     <h2 id="h-how">איך זה עובד? ארבעה צעדים</h2>
