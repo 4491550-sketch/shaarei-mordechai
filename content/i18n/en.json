@@ -34,7 +34,13 @@
     "close": "Close",
     "load_error": "There was an error loading the site content. Please refresh the page.",
     "hebrew_note": "Full article in Hebrew",
-    "brand_aria": "Shaarei Mordechai Kollel, back to top"
+    "brand_aria": "Shaarei Mordechai Kollel, back to top",
+    "bank_bank": "Bank",
+    "bank_branch": "Branch",
+    "bank_account": "Account no.",
+    "bank_owner": "Account name",
+    "bank_copy": "Copy account details",
+    "bank_copied": "Details copied ✓"
   },
   "hero": {
     "title": "Shaarei Mordechai Kollel",
@@ -142,7 +148,10 @@
     "verse_source": "For I have given you a good teaching (Proverbs 4:2)",
     "title": "Partner With Us in Supporting Torah",
     "text": "Your donation enables the kollel scholars to continue devoting themselves to Torah study. Every contribution is received with blessing.",
-    "button": "Donate"
+    "button": "Donate",
+    "bank_title": "Donate by bank transfer",
+    "bank_name": "Mizrahi Tefahot Bank (20)",
+    "bank_owner": "Shaarei Mordechai"
   },
   "contact": {
     "title": "Contact Us",
@@ -150,6 +159,6 @@
     "map_query": "Rashbam 8, Jerusalem"
   },
   "footer": {
-    "registration": "Registered nonprofit (Amuta)"
+    "registration": "Registered nonprofit (Amuta) no. 580389013"
   }
 }

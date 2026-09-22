@@ -34,7 +34,13 @@
     "close": "Cerrar",
     "load_error": "Ocurrió un error al cargar el contenido del sitio. Por favor, actualice la página.",
     "hebrew_note": "Artículo completo en hebreo",
-    "brand_aria": "Kolel Shaaréi Mordejai, volver arriba"
+    "brand_aria": "Kolel Shaaréi Mordejai, volver arriba",
+    "bank_bank": "Banco",
+    "bank_branch": "Sucursal",
+    "bank_account": "N.º de cuenta",
+    "bank_owner": "Titular",
+    "bank_copy": "Copiar datos de la cuenta",
+    "bank_copied": "Datos copiados ✓"
   },
   "hero": {
     "title": "Kolel Shaaréi Mordejai",
@@ -142,7 +148,10 @@
     "verse_source": "Porque os he dado una buena enseñanza (Proverbios 4:2)",
     "title": "Sea socio en el sostén de la Torá",
     "text": "Su donación permite a los avrejim del kolel seguir dedicándose al estudio de la Torá. Toda contribución se recibe con bendición.",
-    "button": "Donar"
+    "button": "Donar",
+    "bank_title": "Donación por transferencia bancaria",
+    "bank_name": "Banco Mizrahi Tefahot (20)",
+    "bank_owner": "Shaaréi Mordejai"
   },
   "contact": {
     "title": "Contáctenos",
@@ -150,6 +159,6 @@
     "map_query": "Rashbam 8, Jerusalem"
   },
   "footer": {
-    "registration": "Asociación registrada (Amutá)"
+    "registration": "Asociación registrada (Amutá) n.º 580389013"
   }
 }

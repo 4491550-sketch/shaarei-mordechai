@@ -34,7 +34,13 @@
     "close": "Fermer",
     "load_error": "Une erreur s'est produite lors du chargement du contenu. Veuillez actualiser la page.",
     "hebrew_note": "Article complet en hébreu",
-    "brand_aria": "Kollel Chaaré Mordekhaï, haut de page"
+    "brand_aria": "Kollel Chaaré Mordekhaï, haut de page",
+    "bank_bank": "Banque",
+    "bank_branch": "Agence",
+    "bank_account": "N° de compte",
+    "bank_owner": "Titulaire",
+    "bank_copy": "Copier les coordonnées",
+    "bank_copied": "Coordonnées copiées ✓"
   },
   "hero": {
     "title": "Kollel Chaaré Mordekhaï",
@@ -142,7 +148,10 @@
     "verse_source": "Car je vous ai donné un bon enseignement (Proverbes 4, 2)",
     "title": "Soyez partenaires du soutien à la Torah",
     "text": "Votre don permet aux avrekhim du kollel de continuer à se consacrer à l'étude de la Torah. Chaque contribution est reçue avec bénédiction.",
-    "button": "Faire un don"
+    "button": "Faire un don",
+    "bank_title": "Don par virement bancaire",
+    "bank_name": "Banque Mizrahi Tefahot (20)",
+    "bank_owner": "Chaaré Mordekhaï"
   },
   "contact": {
     "title": "Nous contacter",
@@ -150,6 +159,6 @@
     "map_query": "Rashbam 8, Jerusalem"
   },
   "footer": {
-    "registration": "Association enregistrée (Amouta)"
+    "registration": "Association enregistrée (Amouta) n° 580389013"
   }
 }
