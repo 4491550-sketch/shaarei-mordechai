@@ -74,7 +74,12 @@
     "standing_copied": "Code copied ✓",
     "standing_send": "Send standing order confirmation",
     "standing_subject": "Standing order confirmation – donation to Shaarei Mordechai Kollel",
-    "standing_body": "Hello,\nAttached is the bank's confirmation of a standing order to Shaarei Mordechai Kollel (institution code 36790).\n\nFull name:\nPhone:\nMonthly amount:\n\nThank you"
+    "standing_body": "Hello,\nAttached is the bank's confirmation of a standing order to Shaarei Mordechai Kollel (institution code 36790).\n\nFull name:\nPhone:\nMonthly amount:\n\nThank you",
+    "pay_label": "Payment methods",
+    "pay_card": "Credit card",
+    "pay_bit": "Bit",
+    "pay_installments": "Installments",
+    "pay_keva": "Monthly credit card donation"
   },
   "hero": {
     "title": "Shaarei Mordechai Kollel",
@@ -182,12 +187,13 @@
     "verse_source": "For I have given you a good teaching (Proverbs 4:2)",
     "title": "Partner With Us in Supporting Torah",
     "text": "Your donation enables the kollel scholars to continue devoting themselves to Torah study. Every contribution is received with blessing.",
-    "button": "Donate",
+    "button": "Donate by credit card or Bit",
     "bank_title": "Donate by bank transfer",
     "bank_name": "Mizrahi Tefahot Bank (20)",
     "bank_owner": "Shaarei Mordechai",
     "standing_title": "Donate by bank standing order",
-    "standing_text": "Israeli bank account holders can set up a standing order directly from their account using the kollel's institution code."
+    "standing_text": "Israeli bank account holders can set up a standing order directly from their account using the kollel's institution code.",
+    "pay_note": "Secure payment via the Nedarim Plus system"
   },
   "contact": {
     "title": "Contact Us",

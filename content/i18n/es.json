@@ -74,7 +74,12 @@
     "standing_copied": "Código copiado ✓",
     "standing_send": "Enviar confirmación de la orden permanente",
     "standing_subject": "Confirmación de orden permanente – donación al Kolel Shaaréi Mordejai",
-    "standing_body": "Hola,\nAdjunto la confirmación del banco de una orden permanente a favor del Kolel Shaaréi Mordejai (código de institución 36790).\n\nNombre completo:\nTeléfono:\nMonto mensual:\n\nMuchas gracias"
+    "standing_body": "Hola,\nAdjunto la confirmación del banco de una orden permanente a favor del Kolel Shaaréi Mordejai (código de institución 36790).\n\nNombre completo:\nTeléfono:\nMonto mensual:\n\nMuchas gracias",
+    "pay_label": "Medios de pago",
+    "pay_card": "Tarjeta de crédito",
+    "pay_bit": "Bit",
+    "pay_installments": "Pago en cuotas",
+    "pay_keva": "Donación mensual con tarjeta"
   },
   "hero": {
     "title": "Kolel Shaaréi Mordejai",
@@ -182,12 +187,13 @@
     "verse_source": "Porque os he dado una buena enseñanza (Proverbios 4:2)",
     "title": "Sea socio en el sostén de la Torá",
     "text": "Su donación permite a los avrejim del kolel seguir dedicándose al estudio de la Torá. Toda contribución se recibe con bendición.",
-    "button": "Donar",
+    "button": "Donar con tarjeta o Bit",
     "bank_title": "Donación por transferencia bancaria",
     "bank_name": "Banco Mizrahi Tefahot (20)",
     "bank_owner": "Shaaréi Mordejai",
     "standing_title": "Donación por orden permanente bancaria",
-    "standing_text": "Los titulares de una cuenta bancaria en Israel pueden establecer una orden permanente directamente desde su cuenta, con el código de institución del kolel."
+    "standing_text": "Los titulares de una cuenta bancaria en Israel pueden establecer una orden permanente directamente desde su cuenta, con el código de institución del kolel.",
+    "pay_note": "Pago seguro a través del sistema Nedarim Plus"
   },
   "contact": {
     "title": "Contáctenos",

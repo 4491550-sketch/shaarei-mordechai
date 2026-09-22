@@ -74,7 +74,12 @@
     "standing_copied": "Code copié ✓",
     "standing_send": "Envoyer la confirmation de l'ordre permanent",
     "standing_subject": "Confirmation d'ordre permanent – don au Kollel Chaaré Mordekhaï",
-    "standing_body": "Bonjour,\nVeuillez trouver ci-joint la confirmation de la banque pour un ordre permanent en faveur du Kollel Chaaré Mordekhaï (code d'institution 36790).\n\nNom complet :\nTéléphone :\nMontant mensuel :\n\nMerci beaucoup"
+    "standing_body": "Bonjour,\nVeuillez trouver ci-joint la confirmation de la banque pour un ordre permanent en faveur du Kollel Chaaré Mordekhaï (code d'institution 36790).\n\nNom complet :\nTéléphone :\nMontant mensuel :\n\nMerci beaucoup",
+    "pay_label": "Moyens de paiement",
+    "pay_card": "Carte bancaire",
+    "pay_bit": "Bit",
+    "pay_installments": "Paiement en plusieurs fois",
+    "pay_keva": "Don mensuel par carte"
   },
   "hero": {
     "title": "Kollel Chaaré Mordekhaï",
@@ -182,12 +187,13 @@
     "verse_source": "Car je vous ai donné un bon enseignement (Proverbes 4, 2)",
     "title": "Soyez partenaires du soutien à la Torah",
     "text": "Votre don permet aux avrekhim du kollel de continuer à se consacrer à l'étude de la Torah. Chaque contribution est reçue avec bénédiction.",
-    "button": "Faire un don",
+    "button": "Donner par carte ou par Bit",
     "bank_title": "Don par virement bancaire",
     "bank_name": "Banque Mizrahi Tefahot (20)",
     "bank_owner": "Chaaré Mordekhaï",
     "standing_title": "Don par ordre permanent bancaire",
-    "standing_text": "Les titulaires d'un compte bancaire en Israël peuvent mettre en place un ordre permanent directement depuis leur compte, avec le code d'institution du kollel."
+    "standing_text": "Les titulaires d'un compte bancaire en Israël peuvent mettre en place un ordre permanent directement depuis leur compte, avec le code d'institution du kollel.",
+    "pay_note": "Paiement sécurisé via le système Nedarim Plus"
   },
   "contact": {
     "title": "Nous contacter",
