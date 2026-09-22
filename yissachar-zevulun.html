@@ -191,6 +191,10 @@
   .jf input:focus{border-color:var(--gold)}
   .jf input[aria-invalid=true]{border-color:#b3261e}
   .jf .chips{grid-column:1/-1;margin:0}
+  .tiersel{padding:12px 14px!important;border:1.5px dashed #d9cba8!important;border-radius:12px;background:#fff}
+  .tiersel legend{font-weight:700;color:var(--ink);font-size:.98rem;padding:0 6px}
+  .tiersel legend em{font-style:normal;color:#9a3b1f}
+  .tiersel[aria-invalid=true]{border-color:#b3261e!important}
   .jf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .jf .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:2px 0 0;line-height:1.6}
   .jf .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em;font-size:.98rem}
@@ -397,6 +401,13 @@
   </div>
   <div class="join-body">
     <form class="jf" id="joinForm" novalidate>
+      <fieldset class="chips tiersel full" id="jTierSet">
+        <legend>סוג השותפות <em aria-hidden="true">*</em></legend>
+        <label><input type="radio" name="tier" value="תרומה חודשית קבועה"><span>תרומה חודשית קבועה</span></label>
+        <label><input type="radio" name="tier" value="חצי אברך"><span>חצי אברך</span></label>
+        <label><input type="radio" name="tier" value="אברך שלם"><span>אברך שלם</span></label>
+        <label><input type="radio" name="tier" value="החזקת מסגרת לימוד"><span>החזקת מסגרת לימוד</span></label>
+      </fieldset>
       <div class="full"><label for="jCert">השם שיופיע על התעודה <em aria-hidden="true">*</em></label><input id="jCert" name="certName" required maxlength="60" autocomplete="off"></div>
       <fieldset class="chips">
         <legend>השותפות היא:</legend>
@@ -436,14 +447,15 @@
     a.addEventListener('click',function(e){
       e.preventDefault();opener=a;
       var card=a.closest('.card');tier=card&&card.querySelector('h3')?card.querySelector('h3').textContent.trim():'';
-      tierP.textContent=tier?('בחרתם: '+tier+'. '+baseTier):baseTier;
+      tierP.textContent=baseTier;
+      form.querySelectorAll('input[name=tier]').forEach(function(r){r.checked=(r.value===tier)});
       var pv=document.getElementById('certInput'),pf=document.querySelector('input[name=certFor]:checked');
       var jc=document.getElementById('jCert');
       if(pv&&pv.value.trim()&&!jc.value)jc.value=pv.value.trim();
       if(pf&&pf.value){var r=form.querySelector('input[name=certFor][value="'+pf.value+'"]');if(r)r.checked=true;}
       form.hidden=false;done.hidden=true;err.textContent='';
       dlg.showModal();
-      setTimeout(function(){(jc.value?document.getElementById('jName'):jc).focus()},50);
+      setTimeout(function(){var t=form.querySelector('input[name=tier]:checked');(t?(jc.value?document.getElementById('jName'):jc):form.querySelector('input[name=tier]')).focus()},50);
     });
   });
   function close(){dlg.close();if(opener)opener.focus();}
@@ -454,6 +466,7 @@
   function valid(){
     form.querySelectorAll('[aria-invalid]').forEach(function(x){x.removeAttribute('aria-invalid')});
     var f=function(id){return document.getElementById(id)};
+    if(!form.querySelector('input[name=tier]:checked')){var ts=f('jTierSet');ts.setAttribute('aria-invalid','true');err.textContent='נא לבחור סוג שותפות';ts.querySelector('input').focus();return false;}
     if(!f('jCert').value.trim())return bad(f('jCert'),'נא למלא את השם שיופיע על התעודה');
     if(!f('jName').value.trim())return bad(f('jName'),'נא למלא שם מלא');
     var ph=f('jPhone').value.replace(/[\s\-()]/g,'');
@@ -469,7 +482,7 @@
     if(!valid())return;
     var w=window.open(DONATE,'_blank','noopener');
     var data=new URLSearchParams(new FormData(form));
-    data.append('tier',tier||'כללי');data.append('page',location.pathname);
+    data.append('page',location.pathname);
     if(ENDPOINT.indexOf('https://')===0){
       try{fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data,keepalive:true});}catch(x){}
     }
