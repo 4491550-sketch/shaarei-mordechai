@@ -51,6 +51,11 @@ content:
           - { name: title, label: כותרת, type: string }
           - { name: text, label: טקסט, type: text }
           - { name: button, label: טקסט הכפתור, type: string }
+          - { name: bank_title, label: כותרת העברה בנקאית, type: string }
+          - { name: bank_name, label: שם הבנק, type: string }
+          - { name: bank_branch, label: מספר סניף, type: string }
+          - { name: bank_account, label: מספר חשבון, type: string }
+          - { name: bank_owner, label: שם בעל החשבון, type: string }
       - name: contact
         label: צור קשר
         type: object
