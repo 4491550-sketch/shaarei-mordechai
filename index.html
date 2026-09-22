@@ -325,6 +325,23 @@
     .lang-btn .chev{display:none}
     .burger{padding:6px;min-width:44px}
   }
+  /* === כפתורי תפריט ושפה ברורים בנייד (22.9.2026) === */
+  .tool-label{display:none}
+  @media (max-width:960px){
+    .nav-tools{gap:8px}
+    .lang-btn,.burger{flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:54px;min-height:50px;padding:5px 8px;border-radius:12px;background:rgba(255,255,255,.1);border:1px solid rgba(227,197,122,.6);color:#fff}
+    .lang-btn svg,.burger svg{width:22px;height:22px}
+    .lang-btn .lang-code,.lang-btn .chev{display:none}
+    .tool-label{display:block;font-size:.72rem;font-weight:700;line-height:1;color:var(--gold-light);white-space:nowrap}
+    .burger .ico-close{display:none}
+    .burger[aria-expanded="true"] .ico-open{display:none}
+    .burger[aria-expanded="true"] .ico-close{display:block}
+    .burger[aria-expanded="true"],.lang.open .lang-btn{background:rgba(227,197,122,.18);border-color:var(--gold-light)}
+  }
+  @media (max-width:380px){
+    .nav-tools{gap:5px}
+    .lang-btn,.burger{min-width:48px;padding:5px 6px}
+  }
 </style>
 </head>
 <body>
@@ -359,6 +376,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 3 2.8 15 0 18M12 3c-2.8 3-2.8 15 0 18"/></svg>
           <span class="lang-code" id="lang-current">עברית</span>
           <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          <span class="tool-label" id="lang-label" aria-hidden="true">שפה</span>
         </button>
         <ul class="lang-menu" id="lang-menu">
           <li><a href="/" lang="he" data-lang="he">עברית <small>HE</small></a></li>
@@ -368,7 +386,9 @@
         </ul>
       </div>
       <button class="burger" aria-label="תפריט" aria-expanded="false" aria-controls="menu" data-t-aria="ui.menu_label">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ico-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="ico-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        <span class="tool-label" aria-hidden="true" data-t="ui.menu_label">תפריט</span>
       </button>
     </div>
   </div>
@@ -810,6 +830,8 @@
   // Language switcher
   const lang = $("#lang");
   const langBtn = lang.querySelector(".lang-btn");
+  const langLabel = $("#lang-label");
+  if (langLabel) langLabel.textContent = ({ he: "שפה", en: "Language", fr: "Langue", es: "Idioma" })[LANG] || "שפה";
   langBtn.addEventListener("click", e => { e.stopPropagation(); const open = lang.classList.toggle("open"); langBtn.setAttribute("aria-expanded", open); });
   document.addEventListener("click", () => { lang.classList.remove("open"); langBtn.setAttribute("aria-expanded", "false"); });
   document.addEventListener("keydown", e => { if (e.key === "Escape") { lang.classList.remove("open"); langBtn.setAttribute("aria-expanded", "false"); } });
