@@ -141,6 +141,43 @@
   .ways .card p{margin-top:8px;flex:1}
   .ways .card .btn{margin-top:14px;align-self:center;padding:10px 24px;font-size:1rem}
   .q{font-family:var(--serif);color:var(--ink);font-weight:700}
+  /* === טופס הקדשה === */
+  dialog.ded-dlg{border:0;padding:0;border-radius:18px;width:min(94vw,560px);max-height:94vh;overflow:auto;background:var(--parchment);color:var(--text);box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  dialog.ded-dlg::backdrop{background:rgba(6,12,26,.75)}
+  .ded-dlg [hidden]{display:none!important}
+  .dd-head{background:radial-gradient(ellipse at 50% 0,#1d3561 0,var(--ink) 70%);color:#fff;padding:22px 24px 18px;position:relative;text-align:center}
+  .dd-head .orn{color:var(--gold-light);font-size:1.1rem;letter-spacing:6px}
+  .dd-head h2{color:#fff;font-size:1.55rem;margin:4px 0 0;padding-inline:40px}.dd-head h2::after{background:var(--gold-light);margin-inline:auto}
+  .dd-head p{margin:8px 0 0;color:#dfe5f0;font-size:1rem;line-height:1.6}
+  .dd-x{position:absolute;top:12px;inset-inline-end:12px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:1.5rem;cursor:pointer}
+  .dd-body{padding:20px 24px 24px}
+  .df{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+  .df .full{grid-column:1/-1}
+  .df label,.df legend{display:block;font-weight:700;color:var(--ink);font-size:.98rem;margin-bottom:4px}
+  .df em{font-style:normal;color:#9a3b1f}
+  .df input,.df textarea{width:100%;font:inherit;font-size:1.05rem;padding:10px 12px;border:2px solid #d9cba8;border-radius:10px;background:#fff;color:var(--ink);min-height:48px}
+  .df textarea{resize:vertical}
+  .df input:focus,.df textarea:focus{border-color:var(--gold);outline:2px solid transparent}
+  .df [aria-invalid=true]{border-color:#b3261e!important}
+  .df fieldset{border:0;padding:0;margin:0}
+  .df .types{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+  .df .types legend{width:100%}
+  .df .types label{position:relative;margin:0;font-weight:600}
+  .df .types input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0;border:0;margin:0}
+  .df .types span{display:inline-block;padding:9px 16px;border:2px solid #d9cba8;border-radius:999px;background:#fff;cursor:pointer;transition:.15s}
+  .df .types input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+  .df .types input:focus-visible+span{outline:3px solid var(--gold);outline-offset:2px}
+  .df .hint{font-size:.9rem;color:var(--muted);margin:4px 0 0;line-height:1.5;font-weight:400}
+  .df .sep{grid-column:1/-1;border:0;border-top:1px solid #e6d9b8;margin:4px 0 0}
+  .df .sub-h{grid-column:1/-1;font-weight:700;color:var(--ink);font-size:1.15rem;margin:0}
+  .df .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .df .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:2px 0 0;line-height:1.6}
+  .df .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em}
+  .df .go{grid-column:1/-1;width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:1.1rem}
+  .dd-done{text-align:center;padding:10px 4px}
+  .dd-done .ok{width:64px;height:64px;border-radius:50%;background:var(--ink);color:var(--gold-light);display:grid;place-items:center;font-size:2rem;margin:0 auto 10px}
+  .dd-done h3{font-family:var(--serif);color:var(--ink);font-size:1.4rem;margin:0 0 6px}
+  @media(max-width:520px){.df{grid-template-columns:1fr}.dd-body{padding:18px 16px 20px}}
 </style>
 </head>
 <body>
@@ -261,7 +298,7 @@
       <div class="card"><h3>תרומה חד־פעמית</h3><p>תרומה בכל סכום, שעמה נעשים שותפים בתורה הנלמדת בכולל.</p><a class="btn" href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener">לתרומה<span class="sr-only"> חד־פעמית (נפתח בחלון חדש)</span></a></div>
       <div class="card"><h3>הוראת קבע חודשית</h3><p>החזקה קבועה, שבזכותה אתם שותפים בכל חודש, בכל יום ובכל שעת לימוד.</p><a class="btn" href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener">להוראת קבע<span class="sr-only"> (נפתח בחלון חדש)</span></a></div>
       <div class="card"><h3>הסכם יששכר וזבולון</h3><p>שותפות מלאה בהחזקת אברך, הכוללת תעודת שותפות על שמכם.</p><a class="btn" href="/yissachar-zevulun">לפרטי ההסכם</a></div>
-      <div class="card"><h3>הקדשה לזכות או לעילוי נשמה</h3><p>הקדשת ההחזקה לזכות יקירים או לעילוי נשמת אהובים.</p><a class="btn" href="mailto:yr@5377177.co.il?subject=%D7%94%D7%A7%D7%93%D7%A9%D7%AA%20%D7%94%D7%97%D7%96%D7%A7%D7%AA%20%D7%AA%D7%95%D7%A8%D7%94">לתיאום<span class="sr-only"> בדוא״ל</span></a></div>
+      <div class="card"><h3>הקדשה לזכות או לעילוי נשמה</h3><p>הקדשת הלימוד בכולל לזכות יקירים, לרפואה, לישועה או לעילוי נשמת אהובים.</p><a class="btn" href="#hakdasha" id="dedOpen" aria-haspopup="dialog">להקדשת הלימוד</a></div>
     </div>
   </div>
 </section>
@@ -308,5 +345,75 @@
 <footer>
   <div class="wrap">רשת כוללים שערי מרדכי · ע״ר 580389013 · רחוב רשב״ם 8, ירושלים · <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></div>
 </footer>
+<dialog class="ded-dlg" id="dedDlg" aria-labelledby="dedTitle">
+  <div class="dd-head">
+    <div class="orn" aria-hidden="true">✦ ✦ ✦</div>
+    <h2 id="dedTitle">הקדשת הלימוד בכולל</h2>
+    <p>אברכי הכולל יזכירו את השמות בבית המדרש, והתורה הנלמדת תעמוד לזכותם.</p>
+    <button type="button" class="dd-x" id="dedX" aria-label="סגירה">×</button>
+  </div>
+  <div class="dd-body">
+    <form class="df" id="dedForm" novalidate>
+      <fieldset class="types"><legend>מטרת ההקדשה <em aria-hidden="true">*</em></legend><label><input type="radio" name="dedType" value="לזכות" checked><span>לזכות</span></label><label><input type="radio" name="dedType" value="לרפואה שלמה"><span>לרפואה שלמה</span></label><label><input type="radio" name="dedType" value="להצלחה"><span>להצלחה</span></label><label><input type="radio" name="dedType" value="לזיווג הגון"><span>לזיווג הגון</span></label><label><input type="radio" name="dedType" value="לזרע של קיימא"><span>לזרע של קיימא</span></label><label><input type="radio" name="dedType" value="לעילוי נשמת"><span>לעילוי נשמת</span></label></fieldset>
+      <div class="full"><label for="dNames">שמות להקדשה <em aria-hidden="true">*</em></label><textarea id="dNames" name="dedNames" rows="3" maxlength="500" required aria-describedby="dNamesH" placeholder="לדוגמה: משה בן שרה, רחל בת לאה"></textarea><p class="hint" id="dNamesH">נהוג לכתוב שם ושם האם. ניתן לכתוב כמה שמות, מופרדים בפסיק.</p></div>
+      <div class="full" id="dYahrWrap" hidden><label for="dYahr">תאריך הפטירה (יום השנה)</label><input id="dYahr" name="yahrzeit" maxlength="40" placeholder="לדוגמה: י״ב בתשרי"><p class="hint">הלימוד יוקדש גם ביום השנה.</p></div>
+      <hr class="sep">
+      <p class="sub-h">פרטי המקדיש</p>
+      <div class="full"><label for="dName">שם מלא <em aria-hidden="true">*</em></label><input id="dName" name="fullName" required maxlength="60" autocomplete="name"></div>
+      <div><label for="dPhone">טלפון נייד <em aria-hidden="true">*</em></label><input id="dPhone" name="phone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" dir="ltr"></div>
+      <div><label for="dEmail">דוא״ל</label><input id="dEmail" name="email" type="email" maxlength="80" autocomplete="email" dir="ltr"></div>
+      <div class="hp" aria-hidden="true"><label for="dWeb">אתר</label><input id="dWeb" name="website" tabindex="-1" autocomplete="off"></div>
+      <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי לצורך ההקדשה וליצירת קשר בלבד, ואינם מועברים לאחרים.</p>
+      <p class="err" id="dedErr" role="alert"></p>
+      <button type="submit" class="btn go"><span aria-hidden="true">🔒 </span>שליחת ההקדשה והמשך לתרומה<span class="sr-only"> (דף התרומה ייפתח בחלון חדש)</span></button>
+    </form>
+    <div class="dd-done" id="dedDone" hidden tabindex="-1">
+      <div class="ok" aria-hidden="true">✓</div>
+      <h3>תודה רבה, ההקדשה נקלטה</h3>
+      <p>השמות יועברו לאברכי הכולל. דף התרומה המאובטח נפתח בחלון חדש.</p>
+      <p><a class="btn" href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener">הדף לא נפתח? לחצו כאן לתרומה<span class="sr-only"> (נפתח בחלון חדש)</span></a></p>
+    </div>
+  </div>
+</dialog>
+<script>
+(function(){
+  var ENDPOINT='https://script.google.com/macros/s/AKfycbxLZ_HjN84ioEnoxgVif-QPasBUeiSLz9_CcRCqWVJPdQtNjNIIsEoXdoQmwQRTvRz4yg/exec';
+  var DONATE='https://www.matara.pro/nedarimplus/online/?mosad=7014763';
+  var dlg=document.getElementById('dedDlg'),form=document.getElementById('dedForm'),done=document.getElementById('dedDone'),err=document.getElementById('dedErr'),btn=document.getElementById('dedOpen');
+  var yw=document.getElementById('dYahrWrap');
+  function f(id){return document.getElementById(id)}
+  form.querySelectorAll('input[name=dedType]').forEach(function(r){r.addEventListener('change',function(){yw.hidden=!(r.checked&&r.value==='לעילוי נשמת');});});
+  if(!dlg.showModal){btn.href='mailto:yr@5377177.co.il';return;}
+  btn.addEventListener('click',function(e){e.preventDefault();form.hidden=false;done.hidden=true;err.textContent='';dlg.showModal();setTimeout(function(){f('dNames').focus()},50);});
+  if(location.hash==='#hakdasha')setTimeout(function(){btn.click()},300);
+  function close(){dlg.close();btn.focus();}
+  f('dedX').addEventListener('click',close);
+  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+  function bad(el,msg){el.setAttribute('aria-invalid','true');err.textContent=msg;el.focus();return false;}
+  function valid(){
+    form.querySelectorAll('[aria-invalid]').forEach(function(x){x.removeAttribute('aria-invalid')});
+    if(!f('dNames').value.trim())return bad(f('dNames'),'נא לכתוב את השמות להקדשה');
+    if(!f('dName').value.trim())return bad(f('dName'),'נא למלא שם מלא');
+    var ph=f('dPhone').value.replace(/[\s\-()]/g,'');
+    if(!/^(\+?972|0)5\d{8}$/.test(ph)&&!/^\+?\d{9,15}$/.test(ph))return bad(f('dPhone'),'נא למלא מספר נייד תקין, למשל 050-1234567');
+    var em=f('dEmail').value.trim();
+    if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return bad(f('dEmail'),'כתובת הדוא״ל אינה תקינה');
+    return true;
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!valid())return;
+    if(f('dWeb').value)return;
+    window.open(DONATE,'_blank','noopener');
+    var data=new URLSearchParams(new FormData(form));
+    data.delete('website');
+    if(yw.hidden)data.delete('yahrzeit');
+    data.append('tier','הקדשת לימוד');
+    data.append('page',location.pathname);
+    try{fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data,keepalive:true}).catch(function(){});}catch(x){}
+    form.hidden=true;done.hidden=false;done.focus();
+  });
+})();
+</script>
 </body>
 </html>
