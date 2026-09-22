@@ -207,6 +207,8 @@
   .jf .chips input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0;border:0;margin:0}
   .jf .chips label{position:relative}
   .jf .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
+  .consent{grid-column:1/-1;display:flex!important;align-items:flex-start;gap:10px;font-weight:600!important;font-size:.95rem!important;line-height:1.55;cursor:pointer;margin:4px 0 0;color:var(--ink)}
+  .consent input{width:22px!important;height:22px!important;min-height:0!important;padding:0!important;margin:2px 0 0!important;flex:none;accent-color:#0e1c36;cursor:pointer}
   .jf .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:2px 0 0;line-height:1.6}
   .jf .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em;font-size:.98rem}
   .jf .go{grid-column:1/-1;width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:1.1rem;margin-top:4px}
@@ -450,7 +452,8 @@
         </div>
       </div>
       <div class="hp" aria-hidden="true"><label for="jWeb">אתר</label><input id="jWeb" name="website" tabindex="-1" autocomplete="off"></div>
-      <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי רק למשלוח התעודה וליצירת קשר בענייני השותפות, ואינם מועברים לאחרים.</p>
+      <label class="consent" for="jConsent"><input type="checkbox" id="jConsent" name="marketingConsent" value="כן"><span>אני מסכים/ה לקבל מרשת כוללים שערי מרדכי עדכונים, הזמנות ובקשות תרומה בדוא״ל, ב-SMS או בוואטסאפ. אפשר לבטל בכל עת.</span></label>
+      <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי למשלוח התעודה וליצירת קשר בענייני השותפות, כמפורט <a href="/privacy">במדיניות הפרטיות</a>.</p>
       <p class="err" id="joinErr" role="alert"></p>
       <button type="submit" class="btn go"><span aria-hidden="true">🔒 </span>שליחת הפרטים והמשך לתרומה<span class="sr-only"> (דף התרומה ייפתח בחלון חדש)</span></button>
       <p class="skip-d"><a href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener" id="joinSkip">דילוג, המשך לתרומה בלי למלא פרטים<span class="sr-only"> (נפתח בחלון חדש)</span></a></p>
@@ -578,7 +581,7 @@
 </main>
 
 <footer>
-  <div class="wrap">רשת כוללים שערי מרדכי · ע״ר 580389013 · רחוב רשב״ם 8, ירושלים · <a href="tel:+972548442297" dir="ltr">054-844-2297</a> · <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a> · <a href="/negishut">הצהרת נגישות</a></div>
+  <div class="wrap">רשת כוללים שערי מרדכי · ע״ר 580389013 · רחוב רשב״ם 8, ירושלים · <a href="tel:+972548442297" dir="ltr">054-844-2297</a> · <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a> · <a href="/negishut">הצהרת נגישות</a> · <a href="/privacy">מדיניות פרטיות</a></div>
 </footer>
 </body>
 </html>

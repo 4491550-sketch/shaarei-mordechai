@@ -171,6 +171,8 @@
   .df .sep{grid-column:1/-1;border:0;border-top:1px solid #e6d9b8;margin:4px 0 0}
   .df .sub-h{grid-column:1/-1;font-weight:700;color:var(--ink);font-size:1.15rem;margin:0}
   .df .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
+  .consent{grid-column:1/-1;display:flex!important;align-items:flex-start;gap:10px;font-weight:600!important;font-size:.95rem!important;line-height:1.55;cursor:pointer;margin:4px 0 0;color:var(--ink)}
+  .consent input{width:22px!important;height:22px!important;min-height:0!important;padding:0!important;margin:2px 0 0!important;flex:none;accent-color:#0e1c36;cursor:pointer}
   .df .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:2px 0 0;line-height:1.6}
   .df .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em}
   .df .go{grid-column:1/-1;width:100%;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:1.1rem}
@@ -343,7 +345,7 @@
 </main>
 
 <footer>
-  <div class="wrap">רשת כוללים שערי מרדכי · ע״ר 580389013 · רחוב רשב״ם 8, ירושלים · <a href="tel:+972548442297" dir="ltr">054-844-2297</a> · <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a> · <a href="/negishut">הצהרת נגישות</a></div>
+  <div class="wrap">רשת כוללים שערי מרדכי · ע״ר 580389013 · רחוב רשב״ם 8, ירושלים · <a href="tel:+972548442297" dir="ltr">054-844-2297</a> · <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a> · <a href="/negishut">הצהרת נגישות</a> · <a href="/privacy">מדיניות פרטיות</a></div>
 </footer>
 <dialog class="ded-dlg" id="dedDlg" aria-labelledby="dedTitle">
   <div class="dd-head">
@@ -363,7 +365,8 @@
       <div><label for="dPhone">טלפון נייד <em aria-hidden="true">*</em></label><input id="dPhone" name="phone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" dir="ltr"></div>
       <div><label for="dEmail">דוא״ל</label><input id="dEmail" name="email" type="email" maxlength="80" autocomplete="email" dir="ltr"></div>
       <div class="hp" aria-hidden="true"><label for="dWeb">אתר</label><input id="dWeb" name="website" tabindex="-1" autocomplete="off"></div>
-      <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי לצורך ההקדשה וליצירת קשר בלבד, ואינם מועברים לאחרים.</p>
+      <label class="consent" for="dConsent"><input type="checkbox" id="dConsent" name="marketingConsent" value="כן"><span>אני מסכים/ה לקבל מרשת כוללים שערי מרדכי עדכונים, הזמנות ובקשות תרומה בדוא״ל, ב-SMS או בוואטסאפ. אפשר לבטל בכל עת.</span></label>
+      <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי לצורך ההקדשה וליצירת קשר בענייני ההקדשה, כמפורט <a href="/privacy">במדיניות הפרטיות</a>.</p>
       <p class="err" id="dedErr" role="alert"></p>
       <button type="submit" class="btn go"><span aria-hidden="true">🔒 </span>שליחת ההקדשה והמשך לתרומה<span class="sr-only"> (דף התרומה ייפתח בחלון חדש)</span></button>
     </form>
