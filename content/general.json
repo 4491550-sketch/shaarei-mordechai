@@ -37,7 +37,11 @@
     "bank_name": "מזרחי טפחות (20)",
     "bank_branch": "417",
     "bank_account": "480620",
-    "bank_owner": "שערי מרדכי"
+    "bank_owner": "שערי מרדכי",
+    "standing_title": "תרומה בהוראת קבע בנקאית",
+    "standing_text": "ניתן להקים הוראת קבע ישירות מחשבון הבנק שלכם, באמצעות קוד המוסד של הכולל.",
+    "standing_code": "36790",
+    "standing_email": "yr@5377177.co.il"
   },
   "contact": {
     "title": "צור קשר",
