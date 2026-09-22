@@ -195,6 +195,17 @@
   .tiersel legend{font-weight:700;color:var(--ink);font-size:.98rem;padding:0 6px}
   .tiersel legend em{font-style:normal;color:#9a3b1f}
   .tiersel[aria-invalid=true]{border-color:#b3261e!important}
+  .ded{background:#fff;border:1.5px solid #e6d9b8;border-radius:12px;padding:12px 14px}
+  .ded .ded-t{display:flex;align-items:center;gap:10px;cursor:pointer;margin:0;font-size:1.02rem}
+  .ded .ded-t input{width:22px;height:22px;min-height:0;accent-color:#0e1c36;margin:0}
+  .ded .ded-sub{font-size:.9rem;color:var(--muted);margin:4px 0 0;line-height:1.5}
+  .ded #jDedBox{margin-top:10px}
+  .ded .chips{margin:0 0 10px}
+  .ded textarea{width:100%;font:inherit;font-size:1.05rem;padding:10px 12px;border:2px solid #d9cba8;border-radius:10px;background:var(--parchment);color:var(--ink);resize:vertical}
+  .ded textarea:focus{border-color:var(--gold)}
+  .ded textarea[aria-invalid=true]{border-color:#b3261e}
+  .jf .chips input{position:absolute;opacity:0;width:1px;height:1px;min-height:0;padding:0;border:0;margin:0}
+  .jf .chips label{position:relative}
   .jf .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
   .jf .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:2px 0 0;line-height:1.6}
   .jf .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em;font-size:.98rem}
@@ -420,6 +431,24 @@
       <div><label for="jEmail">דוא״ל</label><input id="jEmail" name="email" type="email" maxlength="80" autocomplete="email" dir="ltr"></div>
       <div><label for="jStreet">רחוב ומספר בית <em aria-hidden="true">*</em></label><input id="jStreet" name="street" required maxlength="80" autocomplete="address-line1"></div>
       <div><label for="jCity">עיר <em aria-hidden="true">*</em></label><input id="jCity" name="city" required maxlength="40" autocomplete="address-level2"></div>
+      <div class="ded full">
+        <label class="ded-t"><input type="checkbox" id="jDedOn"> <span>אני רוצה להקדיש את הלימוד</span></label>
+        <p class="ded-sub">האברכים יזכירו את השמות בבית המדרש, והלימוד יוקדש לזכותם.</p>
+        <div id="jDedBox" hidden>
+          <fieldset class="chips">
+            <legend>ההקדשה היא:</legend>
+            <label><input type="radio" name="dedType" value="לזכות" checked><span>לזכות</span></label>
+            <label><input type="radio" name="dedType" value="לרפואה שלמה"><span>לרפואה שלמה</span></label>
+            <label><input type="radio" name="dedType" value="להצלחה"><span>להצלחה</span></label>
+            <label><input type="radio" name="dedType" value="לזיווג הגון"><span>לזיווג הגון</span></label>
+            <label><input type="radio" name="dedType" value="לזרע של קיימא"><span>לזרע של קיימא</span></label>
+            <label><input type="radio" name="dedType" value="לעילוי נשמת"><span>לעילוי נשמת</span></label>
+          </fieldset>
+          <label for="jDedNames">שמות לברכה / להקדשה</label>
+          <textarea id="jDedNames" name="dedNames" rows="3" maxlength="500" placeholder="לדוגמה: משה בן שרה, רחל בת לאה"></textarea>
+          <p class="ded-sub">אפשר לכתוב כמה שמות, מופרדים בפסיק. נהוג לכתוב שם ושם האם.</p>
+        </div>
+      </div>
       <div class="hp" aria-hidden="true"><label for="jWeb">אתר</label><input id="jWeb" name="website" tabindex="-1" autocomplete="off"></div>
       <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי רק למשלוח התעודה וליצירת קשר בענייני השותפות, ואינם מועברים לאחרים.</p>
       <p class="err" id="joinErr" role="alert"></p>
@@ -462,6 +491,8 @@
   document.getElementById('joinX').addEventListener('click',close);
   dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
   document.getElementById('joinSkip').addEventListener('click',function(){setTimeout(function(){dlg.close()},100)});
+  var dedOn=document.getElementById('jDedOn'),dedBox=document.getElementById('jDedBox');
+  dedOn.addEventListener('change',function(){dedBox.hidden=!dedOn.checked;if(dedOn.checked)document.getElementById('jDedNames').focus();});
   function bad(el,msg){el.setAttribute('aria-invalid','true');err.textContent=msg;el.focus();return false;}
   function valid(){
     form.querySelectorAll('[aria-invalid]').forEach(function(x){x.removeAttribute('aria-invalid')});
@@ -475,6 +506,7 @@
     if(em&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em))return bad(f('jEmail'),'כתובת הדוא״ל אינה תקינה');
     if(!f('jStreet').value.trim())return bad(f('jStreet'),'נא למלא רחוב ומספר בית');
     if(!f('jCity').value.trim())return bad(f('jCity'),'נא למלא עיר');
+    if(dedOn.checked&&!f('jDedNames').value.trim())return bad(f('jDedNames'),'נא לכתוב את השמות להקדשה, או לבטל את סימון ההקדשה');
     return true;
   }
   form.addEventListener('submit',function(e){
@@ -482,9 +514,10 @@
     if(!valid())return;
     var w=window.open(DONATE,'_blank','noopener');
     var data=new URLSearchParams(new FormData(form));
+    if(!dedOn.checked){data.delete('dedType');data.delete('dedNames');}
     data.append('page',location.pathname);
     if(ENDPOINT.indexOf('https://')===0){
-      try{fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data,keepalive:true});}catch(x){}
+      try{fetch(ENDPOINT,{method:'POST',mode:'no-cors',body:data,keepalive:true}).catch(function(){});}catch(x){}
     }
     form.hidden=true;done.hidden=false;done.focus();
   });
