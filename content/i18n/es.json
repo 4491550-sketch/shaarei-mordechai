@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Kolel Shaaréi Mordejai | Red de kolelim en Jerusalén",
-    "description": "Shaaréi Mordejai – una red de kolelim y avrejim en Jerusalén y Bnei Brak, en nombre del santo cabalista Rabí Mordejai Sharabi zt\"l, dirigida por el Rab Refael Refaeli shlit\"a. Sea socio en el sostén de la Torá."
+    "description": "Shaaréi Mordejai, una red de kolelim y avrejim en Jerusalén y Bnei Brak, en nombre del santo cabalista Rabí Mordejai Sharabi zt\"l, dirigida por el Rab Refael Refaeli shlit\"a. Sea socio en el sostén de la Torá."
   },
   "ui": {
     "lang_name": "Español",
@@ -28,13 +28,13 @@
     "donation_page": "Ir a la página de donaciones →",
     "map_title": "Mapa",
     "logo_alt": "Logotipo de la red de kolelim Shaaréi Mordejai",
-    "hero_logo_alt": "Red de kolelim Shaaréi Mordejai – en nombre del cabalista Rabí Mordejai Sharabi zt\"l",
+    "hero_logo_alt": "Red de kolelim Shaaréi Mordejai, en nombre del cabalista Rabí Mordejai Sharabi zt\"l",
     "menu_label": "Menú",
     "skip_link": "Saltar al contenido principal",
     "close": "Cerrar",
     "load_error": "Ocurrió un error al cargar el contenido del sitio. Por favor, actualice la página.",
     "hebrew_note": "Artículo completo en hebreo",
-    "brand_aria": "Kolel Shaaréi Mordejai – volver arriba"
+    "brand_aria": "Kolel Shaaréi Mordejai, volver arriba"
   },
   "hero": {
     "title": "Kolel Shaaréi Mordejai",
@@ -44,8 +44,8 @@
     "about_button": "Conozca el kolel"
   },
   "about": {
-    "title": "Sobre la red de kolelim «Shaaréi Mordejai»",
-    "body": "La red de kolelim «Shaaréi Mordejai» fue fundada y funciona en memoria del santo cabalista Rabí Mordejai Sharabi zt\"l, bajo la dirección del Rab Refael Refaeli shlit\"a, quien creció en la casa del Rabino y se nutrió de su Torá desde su juventud.\n\nLa red mantiene kolelim y marcos de estudio en Jerusalén y Bnei Brak, donde los avrejim se dedican al estudio de la Torá a lo largo del día y de la noche — desde el kolel de jornada completa hasta el kolel de Jatzot (medianoche), que estudia en plena noche, mientras el mundo duerme. Junto a los kolelim, las instituciones ofrecen clases de Torá abiertas al público y actos de bondad, continuando el camino de nuestro Maestro zt\"l: Torá, plegaria y ayuda al judío en su hora de necesidad.\n\nCada hora de estudio en la red se dedica a la elevación del alma de nuestro Maestro y al mérito de los donantes y de quienes reciben su apoyo.",
+    "title": "Sobre la red de kolelim Shaaréi Mordejai",
+    "body": "La red de kolelim Shaaréi Mordejai fue fundada y funciona en memoria del santo cabalista Rabí Mordejai Sharabi zt\"l, bajo la dirección del Rab Refael Refaeli shlit\"a, quien creció en la casa del Rabino y se nutrió de su Torá desde su juventud.\n\nLa red mantiene kolelim y marcos de estudio en Jerusalén y Bnei Brak, donde los avrejim se dedican al estudio de la Torá a lo largo del día y de la noche, desde el kolel de jornada completa hasta el kolel de Jatzot (medianoche), que estudia en plena noche, mientras el mundo duerme. Junto a los kolelim, las instituciones ofrecen clases de Torá abiertas al público y actos de bondad, continuando el camino de nuestro Maestro zt\"l: Torá, plegaria y ayuda al judío en su hora de necesidad.\n\nCada hora de estudio en la red se dedica a la elevación del alma de nuestro Maestro y al mérito de los donantes y de quienes reciben su apoyo.",
     "highlights": [
       {
         "title": "Jerusalén y Bnei Brak",
@@ -69,8 +69,8 @@
         "title": "Kolel de jornada completa",
         "text": "Avrejim que se sientan y se esfuerzan en la Torá durante todo el día, desde la mañana hasta la noche, con constancia y perseverancia."
       },
-      "כולל חצי יום — שכונת סנהדריה, ירושלים": {
-        "title": "Kolel de media jornada — Sanhedria, Jerusalén",
+      "כולל חצי יום, שכונת סנהדריה, ירושלים": {
+        "title": "Kolel de media jornada, Sanhedria, Jerusalén",
         "text": "Un marco de estudio de media jornada en el corazón del barrio de Sanhedria, para avrejim que dedican la mitad del día a la Torá."
       },
       "כולל אחר הצהריים": {
@@ -79,7 +79,7 @@
       },
       "כולל חצות": {
         "title": "Kolel de Jatzot (medianoche)",
-        "text": "Avrejim que se levantan en plena noche para el Tikún Jatzot y el estudio de la Torá, mientras el mundo duerme — según el camino de nuestro Maestro zt\"l."
+        "text": "Avrejim que se levantan en plena noche para el Tikún Jatzot y el estudio de la Torá, mientras el mundo duerme, según el camino de nuestro Maestro zt\"l."
       },
       "כולל יום שישי": {
         "title": "Kolel del viernes",
@@ -87,7 +87,7 @@
       },
       "כולל ליל פורים": {
         "title": "Kolel de la noche de Purim",
-        "text": "Una sesión especial de estudio en la noche de Purim — la noche en que se turbó el sueño del rey y comenzó la salvación de Israel — Torá, plegaria y méritos, para que la alegría de Purim nunca quede vacía de Torá."
+        "text": "Una sesión especial de estudio en la noche de Purim, la noche en que se turbó el sueño del rey y comenzó la salvación de Israel, Torá, plegaria y méritos, para que la alegría de Purim nunca quede vacía de Torá."
       },
       "כולל שכונת מקור ברוך, ירושלים": {
         "title": "Kolel de Mekor Baruj, Jerusalén",
@@ -95,7 +95,7 @@
       },
       "כולל בני ברק": {
         "title": "Kolel de Bnei Brak",
-        "text": "La sede de la red en la ciudad de la Torá, Bnei Brak, donde los avrejim estudian con constancia como parte de la red «Shaaréi Mordejai»."
+        "text": "La sede de la red en la ciudad de la Torá, Bnei Brak, donde los avrejim estudian con constancia como parte de la red Shaaréi Mordejai."
       }
     }
   },
@@ -108,19 +108,19 @@
       },
       "/news/rh-kit-2026": {
         "title": "Paquetes festivos para los avrejim del kolel de cara a Rosh Hashaná 5787",
-        "summary": "De cara a Rosh Hashaná 5787, cada avrej de la red recibió un generoso paquete festivo — vino, miel y vales de compra — en reconocimiento a su estudio de la Torá, en los ocho marcos del kolel en Jerusalén y Bnei Brak."
+        "summary": "De cara a Rosh Hashaná 5787, cada avrej de la red recibió un generoso paquete festivo, vino, miel y vales de compra, en reconocimiento a su estudio de la Torá, en los ocho marcos del kolel en Jerusalén y Bnei Brak."
       },
       "/news/rav-amar-shiur": {
         "title": "¿Cuál es la halajá sobre la carne procesada? El Rishón LeTzión cautiva a los avrejim en una clase especial",
         "summary": "Durante su visita, el Rishón LeTzión impartió una clase halájica amplia y profunda ante decenas de avrejim sobre el tema de la carne procesada y sus implicaciones halájicas, exponiendo los fundamentos del tema y sus aspectos halájicos…"
       },
       "/news/chatzot-opening": {
-        "title": "Impresionante ceremonia en Jerusalén: se inaugura el «Kolel Jatzot» bajo la dirección del Rab Refael Refaeli shlit\"a",
-        "summary": "Con la participación de grandes de la Torá, rabinos y figuras públicas, se celebró en Jerusalén la ceremonia de inauguración del «Kolel Jatzot», el octavo kolel de la red «Shaaréi Mordejai»."
+        "title": "Impresionante ceremonia en Jerusalén: se inaugura el Kolel Jatzot bajo la dirección del Rab Refael Refaeli shlit\"a",
+        "summary": "Con la participación de grandes de la Torá, rabinos y figuras públicas, se celebró en Jerusalén la ceremonia de inauguración del Kolel Jatzot, el octavo kolel de la red Shaaréi Mordejai."
       },
       "/news/chanukah-oil-2025": {
         "title": "Distribución de aceite de oliva y clase sobre Janucá para los avrejim del kolel",
-        "summary": "De cara a Janucá, los avrejim de la red se reunieron para una clase especial sobre las leyes de Janucá, al final de la cual cada avrej recibió aceite de oliva para encender las velas de Janucá en su hogar — una tradición del kolel."
+        "summary": "De cara a Janucá, los avrejim de la red se reunieron para una clase especial sobre las leyes de Janucá, al final de la cual cada avrej recibió aceite de oliva para encender las velas de Janucá en su hogar, una tradición del kolel."
       }
     }
   },
@@ -128,7 +128,7 @@
     "title": "Galería",
     "captions": {
       "שיעור תורה לרבים בבית המדרש": "Clase pública de Torá en el beit midrash",
-      "סדר לימוד – אברכי הכולל שוקדים על התורה": "Sesión de estudio – los avrejim inmersos en la Torá",
+      "סדר לימוד, אברכי הכולל שוקדים על התורה": "Sesión de estudio, los avrejim inmersos en la Torá",
       "בית המדרש בשעת הלימוד": "El beit midrash durante el estudio",
       "שיעור מפי ראש הכולל": "Clase a cargo del Rosh Kolel",
       "אברכים בעיון בסוגיה": "Avrejim profundizando en una suguiá",
@@ -139,7 +139,7 @@
   },
   "donate": {
     "verse": "כִּי לֶקַח טוֹב נָתַתִּי לָכֶם",
-    "verse_source": "«Porque os he dado una buena enseñanza» — Proverbios 4:2",
+    "verse_source": "Porque os he dado una buena enseñanza (Proverbios 4:2)",
     "title": "Sea socio en el sostén de la Torá",
     "text": "Su donación permite a los avrejim del kolel seguir dedicándose al estudio de la Torá. Toda contribución se recibe con bendición.",
     "button": "Donar"

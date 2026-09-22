@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Kollel Chaaré Mordekhaï | Réseau de kollelim à Jérusalem",
-    "description": "Chaaré Mordekhaï – un réseau de kollelim et d'avrekhim à Jérusalem et Bné Brak, au nom du saint kabbaliste Rabbi Mordekhaï Charabi zatsal, sous la direction du Rav Raphaël Raphaéli chlita. Soyez partenaires du soutien à la Torah."
+    "description": "Chaaré Mordekhaï, un réseau de kollelim et d'avrekhim à Jérusalem et Bné Brak, au nom du saint kabbaliste Rabbi Mordekhaï Charabi zatsal, sous la direction du Rav Raphaël Raphaéli chlita. Soyez partenaires du soutien à la Torah."
   },
   "ui": {
     "lang_name": "Français",
@@ -28,13 +28,13 @@
     "donation_page": "Accéder à la page de dons →",
     "map_title": "Carte",
     "logo_alt": "Logo du réseau de kollelim Chaaré Mordekhaï",
-    "hero_logo_alt": "Réseau de kollelim Chaaré Mordekhaï – au nom du kabbaliste Rabbi Mordekhaï Charabi zatsal",
+    "hero_logo_alt": "Réseau de kollelim Chaaré Mordekhaï, au nom du kabbaliste Rabbi Mordekhaï Charabi zatsal",
     "menu_label": "Menu",
     "skip_link": "Aller au contenu principal",
     "close": "Fermer",
     "load_error": "Une erreur s'est produite lors du chargement du contenu. Veuillez actualiser la page.",
     "hebrew_note": "Article complet en hébreu",
-    "brand_aria": "Kollel Chaaré Mordekhaï – haut de page"
+    "brand_aria": "Kollel Chaaré Mordekhaï, haut de page"
   },
   "hero": {
     "title": "Kollel Chaaré Mordekhaï",
@@ -44,8 +44,8 @@
     "about_button": "Découvrir le kollel"
   },
   "about": {
-    "title": "À propos du réseau de kollelim « Chaaré Mordekhaï »",
-    "body": "Le réseau de kollelim « Chaaré Mordekhaï » a été fondé et œuvre à la mémoire du saint kabbaliste Rabbi Mordekhaï Charabi zatsal, sous la direction du Rav Raphaël Raphaéli chlita, qui a grandi dans la maison du Rav et s'est abreuvé de sa Torah dès sa jeunesse.\n\nLe réseau gère des kollelim et des cadres d'étude à Jérusalem et à Bné Brak, où des avrekhim se consacrent à l'étude de la Torah tout au long du jour et de la nuit — du kollel à plein temps jusqu'au kollel de 'Hatsot (minuit), qui étudie au cœur de la nuit, à l'heure où le monde dort. Aux côtés des kollelim, les institutions proposent des cours de Torah ouverts à tous et des actes de bonté, poursuivant ainsi la voie de notre Maître zatsal : la Torah, la prière et l'aide au Juif dans la détresse.\n\nChaque heure d'étude au sein du réseau est dédiée à l'élévation de l'âme de notre Maître, et au mérite des donateurs et de ceux qu'ils soutiennent.",
+    "title": "À propos du réseau de kollelim Chaaré Mordekhaï",
+    "body": "Le réseau de kollelim Chaaré Mordekhaï a été fondé et œuvre à la mémoire du saint kabbaliste Rabbi Mordekhaï Charabi zatsal, sous la direction du Rav Raphaël Raphaéli chlita, qui a grandi dans la maison du Rav et s'est abreuvé de sa Torah dès sa jeunesse.\n\nLe réseau gère des kollelim et des cadres d'étude à Jérusalem et à Bné Brak, où des avrekhim se consacrent à l'étude de la Torah tout au long du jour et de la nuit, du kollel à plein temps jusqu'au kollel de 'Hatsot (minuit), qui étudie au cœur de la nuit, à l'heure où le monde dort. Aux côtés des kollelim, les institutions proposent des cours de Torah ouverts à tous et des actes de bonté, poursuivant ainsi la voie de notre Maître zatsal : la Torah, la prière et l'aide au Juif dans la détresse.\n\nChaque heure d'étude au sein du réseau est dédiée à l'élévation de l'âme de notre Maître, et au mérite des donateurs et de ceux qu'ils soutiennent.",
     "highlights": [
       {
         "title": "Jérusalem et Bné Brak",
@@ -69,8 +69,8 @@
         "title": "Kollel à plein temps",
         "text": "Des avrekhim qui étudient la Torah toute la journée, du matin jusqu'au soir, avec assiduité et persévérance."
       },
-      "כולל חצי יום — שכונת סנהדריה, ירושלים": {
-        "title": "Kollel à mi-temps — Sanhédria, Jérusalem",
+      "כולל חצי יום, שכונת סנהדריה, ירושלים": {
+        "title": "Kollel à mi-temps, Sanhédria, Jérusalem",
         "text": "Un cadre d'étude à mi-temps au cœur du quartier de Sanhédria, pour les avrekhim qui consacrent la moitié de la journée à la Torah."
       },
       "כולל אחר הצהריים": {
@@ -79,7 +79,7 @@
       },
       "כולל חצות": {
         "title": "Kollel de 'Hatsot (minuit)",
-        "text": "Des avrekhim qui se lèvent au milieu de la nuit pour le Tikoun 'Hatsot et l'étude de la Torah, à l'heure où le monde dort — selon la voie de notre Maître zatsal."
+        "text": "Des avrekhim qui se lèvent au milieu de la nuit pour le Tikoun 'Hatsot et l'étude de la Torah, à l'heure où le monde dort, selon la voie de notre Maître zatsal."
       },
       "כולל יום שישי": {
         "title": "Kollel du vendredi",
@@ -87,7 +87,7 @@
       },
       "כולל ליל פורים": {
         "title": "Kollel de la nuit de Pourim",
-        "text": "Une session d'étude spéciale la nuit de Pourim — la nuit où le sommeil du roi fut troublé et où commença la délivrance d'Israël — Torah, prière et mérites, afin que la joie de Pourim ne soit jamais dépourvue de Torah."
+        "text": "Une session d'étude spéciale la nuit de Pourim, la nuit où le sommeil du roi fut troublé et où commença la délivrance d'Israël, Torah, prière et mérites, afin que la joie de Pourim ne soit jamais dépourvue de Torah."
       },
       "כולל שכונת מקור ברוך, ירושלים": {
         "title": "Kollel de Mekor Baroukh, Jérusalem",
@@ -95,7 +95,7 @@
       },
       "כולל בני ברק": {
         "title": "Kollel de Bné Brak",
-        "text": "La branche du réseau dans la ville de Torah de Bné Brak, où des avrekhim étudient avec assiduité dans le cadre du réseau « Chaaré Mordekhaï »."
+        "text": "La branche du réseau dans la ville de Torah de Bné Brak, où des avrekhim étudient avec assiduité dans le cadre du réseau Chaaré Mordekhaï."
       }
     }
   },
@@ -108,19 +108,19 @@
       },
       "/news/rh-kit-2026": {
         "title": "Colis de fête pour les avrekhim du kollel à l'approche de Roch Hachana 5787",
-        "summary": "À l'approche de Roch Hachana 5787, chaque avrekh du réseau a reçu un généreux colis de fête — vin, miel et bons d'achat — en reconnaissance de son étude de la Torah, dans les huit cadres du kollel à Jérusalem et Bné Brak."
+        "summary": "À l'approche de Roch Hachana 5787, chaque avrekh du réseau a reçu un généreux colis de fête, vin, miel et bons d'achat, en reconnaissance de son étude de la Torah, dans les huit cadres du kollel à Jérusalem et Bné Brak."
       },
       "/news/rav-amar-shiur": {
         "title": "Quelle est la halakha concernant la viande transformée ? Le Richon LeTsion captive les avrekhim lors d'un cours exceptionnel",
         "summary": "Au cours de sa visite, le Richon LeTsion a donné un cours halakhique approfondi devant des dizaines d'avrekhim sur la question de la viande transformée et ses implications halakhiques, exposant les fondements du sujet et ses aspects halakhiques…"
       },
       "/news/chatzot-opening": {
-        "title": "Cérémonie impressionnante à Jérusalem : inauguration du « Kollel 'Hatsot » sous la direction du Rav Raphaël Raphaéli chlita",
-        "summary": "En présence de grands de la Torah, de rabbanim et de personnalités publiques, la cérémonie d'inauguration du « Kollel 'Hatsot » — le huitième kollel du réseau « Chaaré Mordekhaï » — s'est tenue à Jérusalem."
+        "title": "Cérémonie impressionnante à Jérusalem : inauguration du Kollel 'Hatsot sous la direction du Rav Raphaël Raphaéli chlita",
+        "summary": "En présence de grands de la Torah, de rabbanim et de personnalités publiques, la cérémonie d'inauguration du Kollel 'Hatsot, le huitième kollel du réseau Chaaré Mordekhaï, s'est tenue à Jérusalem."
       },
       "/news/chanukah-oil-2025": {
         "title": "Distribution d'huile d'olive et cours sur 'Hanouka pour les avrekhim du kollel",
-        "summary": "À l'approche de 'Hanouka, les avrekhim du réseau se sont réunis pour un cours spécial sur les lois de 'Hanouka, à l'issue duquel chaque avrekh a reçu de l'huile d'olive pour l'allumage des bougies de 'Hanouka chez lui — une tradition du kollel."
+        "summary": "À l'approche de 'Hanouka, les avrekhim du réseau se sont réunis pour un cours spécial sur les lois de 'Hanouka, à l'issue duquel chaque avrekh a reçu de l'huile d'olive pour l'allumage des bougies de 'Hanouka chez lui, une tradition du kollel."
       }
     }
   },
@@ -128,7 +128,7 @@
     "title": "Galerie",
     "captions": {
       "שיעור תורה לרבים בבית המדרש": "Cours de Torah public au beit hamidrach",
-      "סדר לימוד – אברכי הכולל שוקדים על התורה": "Séance d'étude – les avrekhim plongés dans la Torah",
+      "סדר לימוד, אברכי הכולל שוקדים על התורה": "Séance d'étude, les avrekhim plongés dans la Torah",
       "בית המדרש בשעת הלימוד": "Le beit hamidrach pendant l'étude",
       "שיעור מפי ראש הכולל": "Cours donné par le Roch Kollel",
       "אברכים בעיון בסוגיה": "Avrekhim approfondissant une sougya",
@@ -139,7 +139,7 @@
   },
   "donate": {
     "verse": "כִּי לֶקַח טוֹב נָתַתִּי לָכֶם",
-    "verse_source": "« Car je vous ai donné un bon enseignement » — Proverbes 4, 2",
+    "verse_source": "Car je vous ai donné un bon enseignement (Proverbes 4, 2)",
     "title": "Soyez partenaires du soutien à la Torah",
     "text": "Votre don permet aux avrekhim du kollel de continuer à se consacrer à l'étude de la Torah. Chaque contribution est reçue avec bénédiction.",
     "button": "Faire un don"

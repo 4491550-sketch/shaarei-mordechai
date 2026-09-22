@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Shaarei Mordechai Kollel | Network of Kollelim in Jerusalem",
-    "description": "Shaarei Mordechai – a network of kollelim and Torah scholars in Jerusalem and Bnei Brak, named after the holy kabbalist Rabbi Mordechai Sharabi zt\"l, headed by Rabbi Refael Refaeli shlit\"a. Partner with us in supporting Torah."
+    "description": "Shaarei Mordechai, a network of kollelim and Torah scholars in Jerusalem and Bnei Brak, named after the holy kabbalist Rabbi Mordechai Sharabi zt\"l, headed by Rabbi Refael Refaeli shlit\"a. Partner with us in supporting Torah."
   },
   "ui": {
     "lang_name": "English",
@@ -28,13 +28,13 @@
     "donation_page": "Go to the donation page →",
     "map_title": "Map",
     "logo_alt": "Shaarei Mordechai Kollel Network logo",
-    "hero_logo_alt": "Shaarei Mordechai Kollel Network – named after the kabbalist Rabbi Mordechai Sharabi zt\"l",
+    "hero_logo_alt": "Shaarei Mordechai Kollel Network, named after the kabbalist Rabbi Mordechai Sharabi zt\"l",
     "menu_label": "Menu",
     "skip_link": "Skip to main content",
     "close": "Close",
     "load_error": "There was an error loading the site content. Please refresh the page.",
     "hebrew_note": "Full article in Hebrew",
-    "brand_aria": "Shaarei Mordechai Kollel – back to top"
+    "brand_aria": "Shaarei Mordechai Kollel, back to top"
   },
   "hero": {
     "title": "Shaarei Mordechai Kollel",
@@ -44,8 +44,8 @@
     "about_button": "Get to Know the Kollel"
   },
   "about": {
-    "title": "About the “Shaarei Mordechai” Kollel Network",
-    "body": "The “Shaarei Mordechai” Kollel Network was founded and operates in memory of the holy kabbalist Rabbi Mordechai Sharabi zt\"l, under the leadership of Rabbi Refael Refaeli shlit\"a, who grew up in the Rabbi's home and drew from his Torah from his youth.\n\nThe network runs kollelim and learning programs in Jerusalem and Bnei Brak, where Torah scholars (avreichim) toil in Torah study throughout the day and night — from a full-day kollel to the Chatzot (midnight) Kollel, which learns in the depths of the night while the world sleeps. Alongside the kollelim, the institutions offer public Torah classes and acts of kindness, continuing the path of our Rabbi zt\"l: Torah, prayer, and helping a fellow Jew in his hour of need.\n\nEvery hour of study in the network is learned in memory of our Rabbi, and for the merit of our donors and those they support.",
+    "title": "About the Shaarei Mordechai Kollel Network",
+    "body": "The Shaarei Mordechai Kollel Network was founded and operates in memory of the holy kabbalist Rabbi Mordechai Sharabi zt\"l, under the leadership of Rabbi Refael Refaeli shlit\"a, who grew up in the Rabbi's home and drew from his Torah from his youth.\n\nThe network runs kollelim and learning programs in Jerusalem and Bnei Brak, where Torah scholars (avreichim) toil in Torah study throughout the day and night, from a full-day kollel to the Chatzot (midnight) Kollel, which learns in the depths of the night while the world sleeps. Alongside the kollelim, the institutions offer public Torah classes and acts of kindness, continuing the path of our Rabbi zt\"l: Torah, prayer, and helping a fellow Jew in his hour of need.\n\nEvery hour of study in the network is learned in memory of our Rabbi, and for the merit of our donors and those they support.",
     "highlights": [
       {
         "title": "Jerusalem & Bnei Brak",
@@ -69,8 +69,8 @@
         "title": "Full-Day Kollel",
         "text": "Torah scholars who sit and toil in Torah all day long, from morning until evening, with consistency and diligence."
       },
-      "כולל חצי יום — שכונת סנהדריה, ירושלים": {
-        "title": "Half-Day Kollel — Sanhedria, Jerusalem",
+      "כולל חצי יום, שכונת סנהדריה, ירושלים": {
+        "title": "Half-Day Kollel, Sanhedria, Jerusalem",
         "text": "A half-day learning program in the heart of the Sanhedria neighborhood, for scholars who devote half of each day to Torah."
       },
       "כולל אחר הצהריים": {
@@ -79,7 +79,7 @@
       },
       "כולל חצות": {
         "title": "Chatzot (Midnight) Kollel",
-        "text": "Scholars who rise in the middle of the night for Tikkun Chatzot and Torah study while the world sleeps — in the way of our Rabbi zt\"l."
+        "text": "Scholars who rise in the middle of the night for Tikkun Chatzot and Torah study while the world sleeps, in the way of our Rabbi zt\"l."
       },
       "כולל יום שישי": {
         "title": "Friday Kollel",
@@ -87,7 +87,7 @@
       },
       "כולל ליל פורים": {
         "title": "Purim Night Kollel",
-        "text": "A special learning session on the night of Purim — the night the king's sleep was disturbed and Israel's salvation began — Torah, prayer and merits, so that the joy of Purim is never void of Torah."
+        "text": "A special learning session on the night of Purim, the night the king's sleep was disturbed and Israel's salvation began, Torah, prayer and merits, so that the joy of Purim is never void of Torah."
       },
       "כולל שכונת מקור ברוך, ירושלים": {
         "title": "Mekor Baruch Kollel, Jerusalem",
@@ -95,7 +95,7 @@
       },
       "כולל בני ברק": {
         "title": "Bnei Brak Kollel",
-        "text": "The network's branch in the Torah city of Bnei Brak, where scholars learn with diligence as part of the “Shaarei Mordechai” network."
+        "text": "The network's branch in the Torah city of Bnei Brak, where scholars learn with diligence as part of the Shaarei Mordechai network."
       }
     }
   },
@@ -108,19 +108,19 @@
       },
       "/news/rh-kit-2026": {
         "title": "Holiday gift packages for the kollel scholars ahead of Rosh Hashana 5787",
-        "summary": "Ahead of Rosh Hashana 5787, every scholar in the kollel network received a generous holiday package — wine, honey and shopping vouchers — in appreciation of their Torah study, across all eight kollel programs in Jerusalem and Bnei Brak."
+        "summary": "Ahead of Rosh Hashana 5787, every scholar in the kollel network received a generous holiday package, wine, honey and shopping vouchers, in appreciation of their Torah study, across all eight kollel programs in Jerusalem and Bnei Brak."
       },
       "/news/rav-amar-shiur": {
         "title": "What is the halacha regarding processed meat? The Rishon LeZion captivates the kollel scholars in a special shiur",
         "summary": "During his visit, the Rishon LeZion delivered a comprehensive and in-depth halachic shiur to dozens of scholars on the topic of processed meat and its halachic implications, laying out the foundations of the subject and its halachic aspects…"
       },
       "/news/chatzot-opening": {
-        "title": "An impressive ceremony in Jerusalem: the “Chatzot Kollel” inaugurated under Rabbi Refael Refaeli shlit\"a",
-        "summary": "With the participation of leading Torah figures, rabbis and public figures, the opening ceremony of the “Chatzot Kollel” — the eighth kollel in the “Shaarei Mordechai” network — was held in Jerusalem."
+        "title": "An impressive ceremony in Jerusalem: the Chatzot Kollel inaugurated under Rabbi Refael Refaeli shlit\"a",
+        "summary": "With the participation of leading Torah figures, rabbis and public figures, the opening ceremony of the Chatzot Kollel, the eighth kollel in the Shaarei Mordechai network, was held in Jerusalem."
       },
       "/news/chanukah-oil-2025": {
         "title": "Distribution of olive oil and a Chanukah shiur for the kollel scholars",
-        "summary": "Ahead of Chanukah, the scholars of the kollel network gathered for a special shiur on the laws of Chanukah, after which each scholar received olive oil for lighting the Chanukah candles at home — a tradition of the kollel."
+        "summary": "Ahead of Chanukah, the scholars of the kollel network gathered for a special shiur on the laws of Chanukah, after which each scholar received olive oil for lighting the Chanukah candles at home, a tradition of the kollel."
       }
     }
   },
@@ -128,7 +128,7 @@
     "title": "Gallery",
     "captions": {
       "שיעור תורה לרבים בבית המדרש": "Public Torah class in the beit midrash",
-      "סדר לימוד – אברכי הכולל שוקדים על התורה": "Learning session – kollel scholars immersed in Torah",
+      "סדר לימוד, אברכי הכולל שוקדים על התורה": "Learning session, kollel scholars immersed in Torah",
       "בית המדרש בשעת הלימוד": "The beit midrash during learning",
       "שיעור מפי ראש הכולל": "A shiur from the Rosh Kollel",
       "אברכים בעיון בסוגיה": "Scholars delving into a sugya",
@@ -139,7 +139,7 @@
   },
   "donate": {
     "verse": "כִּי לֶקַח טוֹב נָתַתִּי לָכֶם",
-    "verse_source": "“For I have given you a good teaching” — Proverbs 4:2",
+    "verse_source": "For I have given you a good teaching (Proverbs 4:2)",
     "title": "Partner With Us in Supporting Torah",
     "text": "Your donation enables the kollel scholars to continue devoting themselves to Torah study. Every contribution is received with blessing.",
     "button": "Donate"
