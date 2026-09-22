@@ -51,6 +51,7 @@ content:
           - { name: title, label: כותרת, type: string }
           - { name: text, label: טקסט, type: text }
           - { name: button, label: טקסט הכפתור, type: string }
+          - { name: pay_note, label: שורת הסבר מתחת לכפתור, type: string }
           - { name: bank_title, label: כותרת העברה בנקאית, type: string }
           - { name: bank_name, label: שם הבנק, type: string }
           - { name: bank_branch, label: מספר סניף, type: string }
