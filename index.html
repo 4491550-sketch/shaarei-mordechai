@@ -150,10 +150,11 @@
   .lightbox button{position:absolute;top:18px;inset-inline-end:18px;background:none;border:0;color:#fff;font-size:2.4rem;cursor:pointer;line-height:1}
 
   /* News */
-  .news{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px;margin-top:40px}
+  .news{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:22px;margin-top:40px}
   .news .item{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--stone);border-radius:var(--radius);overflow:hidden;transition:box-shadow .25s, border-color .25s}
   .news a.item:hover{border-color:var(--gold);box-shadow:0 12px 30px rgba(14,28,54,.08)}
-  .news .thumb{aspect-ratio:16/9;border-radius:0}
+  .news .thumb{aspect-ratio:16/9;border-radius:0;object-fit:cover;width:100%}
+  .news .item{max-width:560px}
   .news .body{padding:24px 28px 28px}
   .news .meta{font-size:.85rem;font-weight:700;color:var(--gold)}
   .news .meta time{color:var(--muted);font-weight:600}
@@ -445,7 +446,7 @@
       const inner = (n.image ? photo(n.image, n.title, "thumb") : "") +
         `<div class="body">${meta ? `<span class="meta">${meta}</span>` : ""}<h3>${esc(n.title)}</h3>${paragraphs(n.summary)}${n.url ? '<span class="more">לקריאה ←</span>' : ""}</div>`;
       return n.url
-        ? `<a class="item reveal" href="${esc(n.url)}" target="_blank" rel="noopener">${inner}</a>`
+        ? `<a class="item reveal" href="${esc(n.url)}"${n.url.startsWith("/") ? "" : ' target="_blank" rel="noopener"'}>${inner}</a>`
         : `<article class="item reveal">${inner}</article>`;
     }).join("");
 
