@@ -230,7 +230,7 @@
   .cf .hp{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
   .cf .err{grid-column:1/-1;color:#b3261e;font-weight:700;margin:0;min-height:1.2em}
   .consent{grid-column:1/-1;display:flex!important;align-items:flex-start;gap:10px;font-weight:600!important;font-size:.95rem!important;line-height:1.55;cursor:pointer;margin:4px 0 0;color:var(--ink)}
-  .consent input{width:22px!important;height:22px!important;min-height:0!important;padding:0!important;margin:2px 0 0!important;flex:none;accent-color:#0e1c36;cursor:pointer}
+  .consent input{width:24px!important;height:24px!important;min-height:0!important;padding:0!important;margin:2px 0 0!important;flex:none;accent-color:#0e1c36;cursor:pointer}
   .cf .priv{grid-column:1/-1;font-size:.9rem;color:var(--muted);margin:0}
   .cf button{grid-column:1/-1;justify-self:start;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:1.08rem;min-width:220px}
   .cform-done{text-align:center;padding:26px 10px}
@@ -307,6 +307,22 @@
     .burger{min-width:46px;min-height:46px}
     .menu a{padding:14px}
     .news-meta,time,.date{font-size:.95rem}
+  }
+  /* === טלפונים צרים ובדיקת נייד (22.9.2026) === */
+  @media (max-width:700px){
+    footer a{display:inline-block;padding-block:8px;line-height:1.4}
+    #standing-mail-link{display:inline-block;padding-block:6px}
+  }
+  @media (max-width:380px){
+    .wrap{padding-inline:14px}
+    .nav{gap:8px}
+    .brand{gap:8px;min-width:0}
+    .brand-logo{height:46px}
+    .brand b{font-size:1.05rem}
+    .nav-tools{gap:2px}
+    .lang-btn{padding:6px 8px;min-width:44px}
+    .lang-btn .chev{display:none}
+    .burger{padding:6px;min-width:44px}
   }
 </style>
 </head>
