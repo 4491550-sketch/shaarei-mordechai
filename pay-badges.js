@@ -24,7 +24,7 @@
     links.forEach(function (a) {
       if (!(a.classList.contains('btn') || a.classList.contains('don'))) return;
       if (a.classList.contains('btn-sm')) return;
-      if (a.closest('header, nav, .sticky, .modal, dialog, [role="dialog"], .contact')) return;
+      if (a.closest('header, nav, .hero-actions, .sticky, .modal, dialog, [role="dialog"], .contact')) return;
       var par = a.parentElement, anchor = a;
       if (par && par.tagName === 'P') anchor = par;
       else if (par && par.querySelectorAll(':scope > a.btn, :scope > a.don').length > 1) anchor = par;
