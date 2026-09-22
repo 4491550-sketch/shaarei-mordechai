@@ -203,6 +203,15 @@
   .bank dd{margin:2px 0 0;font-weight:700;font-size:1.15rem;color:#fff}
   .bank .copy{margin-top:14px;background:transparent;border:1.5px solid var(--gold-light);color:var(--gold-light);border-radius:999px;padding:8px 20px;font:inherit;font-weight:700;cursor:pointer;min-height:44px}
   .bank .copy:hover{background:rgba(227,197,122,.12)}
+  .bank .bank-text{color:#d6d0c2;margin:0 0 14px;font-size:1rem}
+  .bank ol{text-align:start;margin:0 auto 16px;padding-inline-start:1.4em;max-width:440px;color:#e8e2d3;line-height:1.7}
+  .bank dd a{color:#fff;text-decoration:none;overflow-wrap:anywhere}
+  .bank dd.small{font-size:1rem}
+  @media (max-width:520px){#standing dl{grid-template-columns:1fr}}
+  .bank .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .bank a.copy{display:inline-flex;align-items:center;text-decoration:none}
+  .bank a.copy.solid{background:var(--gold-light);color:var(--ink)}
+  .bank a.copy.solid:hover{background:#f0d894}
   /* Contact */
   .cform{margin-top:40px;background:#fff;border:1px solid var(--stone);border-radius:var(--radius);padding:30px 32px;box-shadow:0 10px 30px rgba(14,28,54,.06)}
   .cform h3{font-family:var(--serif);color:var(--ink);font-size:1.6rem;margin:0 0 4px}
@@ -429,6 +438,23 @@
       </dl>
       <button type="button" class="copy" id="bank-copy" data-t="ui.bank_copy">העתקת פרטי החשבון</button>
     </div>
+    <div class="bank" id="standing" hidden>
+      <h3 data-f="donate.standing_title"></h3>
+      <p class="bank-text" data-f="donate.standing_text"></p>
+      <ol>
+        <li data-t="ui.standing_step1">נכנסים לאתר או לאפליקציה של הבנק ובוחרים: הרשאה לחיוב חשבון (הוראת קבע).</li>
+        <li data-t="ui.standing_step2">מזינים את קוד המוסד שלנו ואת סכום החיוב החודשי.</li>
+        <li data-t="ui.standing_step3">שולחים את אישור הבנק למייל שלנו, כדי שנוכל לרשום את תרומתכם.</li>
+      </ol>
+      <dl>
+        <div><dt data-t="ui.standing_code">קוד מוסד</dt><dd><bdi data-f="donate.standing_code"></bdi></dd></div>
+        <div><dt data-t="ui.standing_email">שליחת האישור למייל</dt><dd class="small"><a id="standing-mail-link" href="#"><bdi data-f="donate.standing_email"></bdi></a></dd></div>
+      </dl>
+      <div class="actions">
+        <button type="button" class="copy" id="standing-copy" data-t="ui.standing_copy">העתקת קוד המוסד</button>
+        <a class="copy solid" id="standing-mail" href="#" data-t="ui.standing_send">שליחת אישור הוראת הקבע</a>
+      </div>
+    </div>
     <p class="donate-alt" id="donate-phone" hidden><span data-t="ui.donate_phone">לתרומה טלפונית:</span> <a href="#"><bdi data-f="contact.phone"></bdi></a></p>
   </div>
 </section>
@@ -650,6 +676,22 @@
         const txt = [get(d, "donate.bank_name"), t("ui.bank_branch", "סניף") + " " + get(d, "donate.bank_branch"), t("ui.bank_account", "מספר חשבון") + " " + bAcc, t("ui.bank_owner", "על שם") + " " + get(d, "donate.bank_owner")].join(" | ");
         const done = () => { cb.textContent = t("ui.bank_copied", "הפרטים הועתקו ✓"); setTimeout(() => cb.textContent = cbText, 2500); };
         if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => {}); 
+      };
+    }
+
+    // Standing order (bank authorization)
+    const sCode = String(get(d, "donate.standing_code") || "").trim();
+    const sMail = String(get(d, "donate.standing_email") || get(d, "contact.email") || "").trim();
+    $("#standing").hidden = !sCode;
+    if (sCode) {
+      const mailHref = "mailto:" + sMail + "?subject=" + encodeURIComponent(t("ui.standing_subject", "אישור הוראת קבע – תרומה לכולל שערי מרדכי")) + "&body=" + encodeURIComponent(t("ui.standing_body", "שלום,\nמצורף אישור הבנק על הקמת הוראת קבע לטובת כולל שערי מרדכי (קוד מוסד " + sCode + ").\n\nשם מלא:\nטלפון:\nסכום חודשי:\n\nתודה רבה"));
+      $("#standing-mail").href = mailHref;
+      $("#standing-mail-link").href = mailHref;
+      $("#standing-mail").hidden = !sMail;
+      const sc = $("#standing-copy"), scText = sc.textContent;
+      sc.onclick = () => {
+        const done = () => { sc.textContent = t("ui.standing_copied", "הקוד הועתק ✓"); setTimeout(() => sc.textContent = scText, 2500); };
+        if (navigator.clipboard) navigator.clipboard.writeText(sCode).then(done, () => {});
       };
     }
 

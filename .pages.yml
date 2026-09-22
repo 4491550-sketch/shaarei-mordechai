@@ -56,6 +56,10 @@ content:
           - { name: bank_branch, label: מספר סניף, type: string }
           - { name: bank_account, label: מספר חשבון, type: string }
           - { name: bank_owner, label: שם בעל החשבון, type: string }
+          - { name: standing_title, label: כותרת הוראת קבע, type: string }
+          - { name: standing_text, label: טקסט הוראת קבע, type: text }
+          - { name: standing_code, label: קוד מוסד להוראת קבע, type: string }
+          - { name: standing_email, label: מייל לשליחת אישור הוראת קבע, type: string }
       - name: contact
         label: צור קשר
         type: object
