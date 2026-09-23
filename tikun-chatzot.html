@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תיקון חצות | כולל שערי מרדכי</title>
+    <meta name="description" content="השתתף בתיקון חצות: תפילה קדומה בשעות חצות הלילה על טובת ישראל. יום בן-יום: מוקד קדוש שלנו.">
+    <meta name="keywords" content="תיקון חצות, תפילה בלילה, תיקון חצות בירושלים, כולל חצות">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f3e8;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #c29a45;
+        }
+        
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #c29a45;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background-color: #0e1c36;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #c29a45;
+        }
+        
+        nav a {
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e8d4b8;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+        
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: #0e1c36;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-right: 4px solid #c29a45;
+            padding-right: 1rem;
+        }
+        
+        .intro-mystical {
+            background-color: #1a1a2e;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .intro-mystical p {
+            margin: 0.5rem 0;
+            line-height: 1.8;
+        }
+        
+        .intro-mystical strong {
+            color: #c29a45;
+        }
+        
+        .torah-wisdom {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+            font-style: italic;
+        }
+        
+        .why-midnight {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .reason-card {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .reason-card h3 {
+            color: #c29a45;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-kollel {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .stats-highlight {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .stat {
+            background-color: #e8d4b8;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 4px;
+        }
+        
+        .stat-number {
+            color: #0e1c36;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .stat-label {
+            color: #0e1c36;
+            font-size: 0.9rem;
+            margin-top: 0.3rem;
+        }
+        
+        .participation {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .method {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .method h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .what-happens {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .what-happens h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .prayer-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .prayer-list li {
+            padding: 0.5rem 0;
+            padding-right: 1.5rem;
+        }
+        
+        .prayer-list li:before {
+            content: "✡";
+            color: #c29a45;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .spiritual-note {
+            background-color: #e8d4b8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 3px solid #0e1c36;
+            font-weight: 500;
+        }
+        
+        .cta-section {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: #c29a45;
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .cta-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e8d4b8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #c29a45;
+            border: 2px solid #c29a45;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        footer {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            .why-midnight {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-highlight {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>תיקון חצות</h1>
+        <p>תפילה בשעת גזרות ישראל</p>
+    </header>
+    
+    <nav>
+        <a href="/">בית</a>
+        <a href="/about">אודות</a>
+        <a href="/kollelim">הכוללים</a>
+        <a href="/hachzakat-avrech">החזקת אברך</a>
+        <a href="/contact">צור קשר</a>
+    </nav>
+    
+    <main>
+        <div class="intro-mystical">
+            <p><strong>בחצות הלילה,</strong> כשהעולם ישן וכהמולו הפוסק — קול תפילה עולה מירושלים. קול אנשים שעלו בלילה לא כדי לישון, אלא כדי לתקן, להתפלל, ולהעלות את ישראל בתפילה זעקה לשמיים. זו <strong>תיקון חצות</strong> — עבודה רוחנית קדומה בשעה בה דלתות השמיים פתוחות ביותר.</p>
+        </div>
+        
+        <h2>מהו תיקון חצות?</h2>
+        <p>תיקון חצות היא תפילה עתיקה שמתקדשת בחצות הלילה — השעה בה, על פי ערי חכמים, הדינים מתרוממים וההשפעה הרוחנית מגיעה לכוחה המלא. בתיקון חצות, אנשים קוראים תהילים, מתפללים על ישראל, על גאולתה, ועל תקומת הבנין — הכולל, המדינה, והעולם.</p>
+        
+        <div class="torah-wisdom">
+            <strong>"בחצות הלילה קמתי להודות לך..."</strong> — תהילים קי"ט, סב
+            <p style="margin-top: 0.5rem;">כל אלו שקמים בחצות הלילה לתפילה הם משתתפים בפעולה קדומה זו — בדיוק כמו דוד המלך שקם כדי לתודה ולהתפלל.</p>
+        </div>
+        
+        <h2>למה דווקא בחצות הלילה?</h2>
+        <div class="why-midnight">
+            <div class="reason-card">
+                <h3>🌙 השעה הקדומה ביותר</h3>
+                <p>בחצות, כשהשמיים ממש מעל, הקול עולה בבירור לשמיים וההשפעה הרוחנית חזקה ביותר.</p>
+            </div>
+            
+            <div class="reason-card">
+                <h3>🔗 התחברות עמוקה</h3>
+                <p>בלילה הטהור, כשאין תנועה וקול בעולם, הנשמה יכולה להתחבר לאלוקים בעומק שאי אפשר ביום.</p>
+            </div>
+            
+            <div class="reason-card">
+                <h3>⚖️ דינים ממלאים</h3>
+                <p>על פי ערי חכמים, בחצות הדינים מימלאים בעולם — וזה בדיוק הזמן להתפלל על הצלה מהם.</p>
+            </div>
+            
+            <div class="reason-card">
+                <h3>🕊️ שקט ישראל</h3>
+                <p>כאשר ישראל ישן, אלו שקמים לתפילה משמרים עליהם — כמו שומר בלילה על העיר.</p>
+            </div>
+        </div>
+        
+        <h2>על כולל חצות שלנו</h2>
+        <div class="about-kollel">
+            <p>כולל חצות של כולל שערי מרדכי הוא קמור קדוש בו גברים, ובחורים משתתפים בתפילה קדומה זו. כל לילה (או בלילות מסוימים, תלוי בתכנית), קול תהילים ודברי תפילה עולה מהמוקד שלנו בירושלים.</p>
+            
+            <div class="stats-highlight">
+                <div class="stat">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">שנות קיום</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">משתתפים קבועים</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">365</div>
+                    <div class="stat-label">לילות בשנה</div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 1.5rem;"><strong>הנהגה:</strong> כולל חצות הוא בהנהגת הרב רפאל רפאלי שליט"א, אשר דורש בעמוק על חשיבות התפילה הזו ועל השפעתה על העם והארץ.</p>
+        </div>
+        
+        <h2>כיצד מתברך הליל?</h2>
+        <div class="what-happens">
+            <h3>סדר הלילה:</h3>
+            <ul class="prayer-list">
+                <li>תהילים אמרה מיוחדת (פרק או יותר)</li>
+                <li>קריאת קטעי תפילה מיוחדים לתיקון חצות</li>
+                <li>התפילה על ישראל בכללות</li>
+                <li>קריאת דברים מעמקי הלב</li>
+                <li>סיום בברכה ובקרבה לאלוקים</li>
+            </ul>
+        </div>
+        
+        <div class="spiritual-note">
+            💫 כל משתתף מרגיש בעצמו את השיא של הלילה — בשעה שכל ישראל יושן, הוא עומד ומתפלל. זה אינו קשה, זה קדוש.
+        </div>
+        
+        <h2>דרכי השתתפות</h2>
+        <div class="participation">
+            <div class="method">
+                <h3>🌙 משתתף קבוע בלילה</h3>
+                <p>בא כל לילה (או לילות מסוימים כל שבוע) ופוגש את האברכים והבחורים בתיקון חצות.</p>
+            </div>
+            
+            <div class="method">
+                <h3>📖 קורא תהילים מביתך</h3>
+                <p>בחצות הלילה, קרא את התהילים מביתך בכוונה, יחד עם חברים ומשתתפים בכולל.</p>
+            </div>
+            
+            <div class="method">
+                <h3>💪 תמוך בכולל</h3>
+                <p>תן תרומה לתמיכה בכולל חצות — הוצאות, תשלום אור וחום, וכל הוצאה הקשורה.</p>
+            </div>
+            
+            <div class="method">
+                <h3>📞 צור קשר ראשי</h3>
+                <p>אם אתה מעוניין ללמוד עוד או להצטרף בלילה הקרוב, צרו קשר עם הכולל שלנו.</p>
+            </div>
+        </div>
+        
+        <h2>השפעה רוחנית וחומרית</h2>
+        <p>תיקון חצות אינו קבלה מעשית בלבד — הוא גם משנה את הנשמה של המתפלל. כל מי שקם בלילה לתפילה מרגיש בתוך עצמו תغיִרה, הפקת לב, וחיזוק אמונה. וההשפעה כללית — התפילה של 50 גברים בחצות הלילה שומרת על הכללות בברכה ובהצלה.</p>
+        
+        <div class="spiritual-note">
+            "כל מי שקם בלילה לתפילה זוכה לימים של שפע ורחמים" — דברי חכמים על עשר תיקון חצות.
+        </div>
+        
+        <div class="cta-section">
+            <h2>בואו נשמור על הלילה ביחד</h2>
+            <p>אם אתה מעוניין להשתתף בתיקון חצות, להוציא תהילים בביתך בחצות, או לתמוך בכולל החצות שלנו — יש לנו מקום עבורך בחברה הקדומה הזו.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-primary">צרו קשר להצטרפות</a>
+                <a href="/hachzakat-avrech" class="btn btn-secondary">תמכו בכולל חצות</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>כולל שערי מרדכי | רחוב רשב"ם 8, ירושלים</p>
+        <p>📞 02-3204296 | 💬 054-844-2297</p>
+        <p>✉️ <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 כולל שערי מרדכי | <a href="/privacy">מדיניות פרטיות</a> | <a href="/negishut">נגישות</a></p>
+    </footer>
+</body>
+</html>

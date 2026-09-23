@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מעשר כספים | כולל שערי מרדכי</title>
+    <meta name="description" content="תרום עשרון מהכנסתך לתמיכה בלימוד התורה. מעשר כספים = השקעה בעולם הבא ובעם ישראל.">
+    <meta name="keywords" content="מעשר כספים, מעשר הכנסה, מעשר בתורה, תורמים לתורה">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f3e8;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #c29a45;
+        }
+        
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #c29a45;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background-color: #0e1c36;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #c29a45;
+        }
+        
+        nav a {
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e8d4b8;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+        
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: #0e1c36;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-right: 4px solid #c29a45;
+            padding-right: 1rem;
+        }
+        
+        .intro-box {
+            background-color: #e8d4b8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .torah-source {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+            font-style: italic;
+        }
+        
+        .torah-source strong {
+            color: #0e1c36;
+            font-style: normal;
+        }
+        
+        .promises {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .promise-card {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-right: 3px solid #c29a45;
+            transition: transform 0.3s;
+        }
+        
+        .promise-card:hover {
+            transform: translateX(-5px);
+        }
+        
+        .promise-card h3 {
+            color: #c29a45;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .story-box {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .story-box h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .story-box p {
+            margin: 1rem 0;
+        }
+        
+        .story-quote {
+            background-color: #e8d4b8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-right: 3px solid #0e1c36;
+            font-style: italic;
+            color: #0e1c36;
+        }
+        
+        .maaser-methods {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .method {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .method h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .method .details {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+        
+        .calculation-help {
+            background-color: #e8d4b8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        
+        .calculation-help h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .calculation-help p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        
+        .rabbi-advice {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .rabbi-advice h3 {
+            color: #c29a45;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: #c29a45;
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .cta-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e8d4b8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #c29a45;
+            border: 2px solid #c29a45;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        footer {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            .promises {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>מעשר כספים</h1>
+        <p>שותפות בתורה דרך המעשר</p>
+    </header>
+    
+    <nav>
+        <a href="/">בית</a>
+        <a href="/about">אודות</a>
+        <a href="/kollelim">הכוללים</a>
+        <a href="/hachzakat-avrech">החזקת אברך</a>
+        <a href="/contact">צור קשר</a>
+    </nav>
+    
+    <main>
+        <div class="intro-box">
+            <h2 style="margin-top: 0; border-right: none;">מעשר כספים — השקעה נצחית</h2>
+            <p>מעשר כספים אינו הוצאה — זו השקעה בעולם הבא, בברכה, ובישראל. כאשר אתה מתן עשרון מהכנסתך לתמיכה בלימוד התורה, אתה הופך להיות שותף נצחי בחיי הלומד, בברכת השם, ובתיקון העולם.</p>
+        </div>
+        
+        <h2>המקור בתורה וחכמים</h2>
+        <div class="torah-source">
+            <strong>"עשר תעשר את כל תבואת זרעך"</strong> — ספר דברים כ"ח, כב
+            <p style="margin-top: 1rem;">המעשר הוא מצווה עתיקה ביהדות, והדברים הם ברורים: העשרון שלך הוא קדוש, והוא משמר, מחזק, וממברך את הנתרת שלך.</p>
+        </div>
+        
+        <div class="torah-source">
+            <strong>דברי חכמים:</strong> "המעשר מעשיר, ופי שונאי המעשר מתחזקים" — דברים שנשמרות בעד מעשר כוללים.
+            <p style="margin-top: 1rem;">כל מי ששומר מעשר — גם בעיתים קשים, גם בעיתים טובים — מקבל ברכה על כל מטבע.</p>
+        </div>
+        
+        <h2>5 הבטחות ברכה למשומר מעשר</h2>
+        <div class="promises">
+            <div class="promise-card">
+                <h3>💰 ברכה בהכנסה</h3>
+                <p>דברי חכמים מבטיחים שהמעשר שתן לא יחסיר מהרכושך, אלא יברך אותו בהרבה.</p>
+            </div>
+            
+            <div class="promise-card">
+                <h3>🕊️ שלום בנשמה</h3>
+                <p>כאשר אתה מעשר, אתה שם על נשמתך ברכה — דעות השקט, מחשבות נקיות, ודעה שמעשת טוב.</p>
+            </div>
+            
+            <div class="promise-card">
+                <h3>👨‍👩‍👧‍👦 ברכה בבנים</h3>
+                <p>בנים ובנות תלמידי חכמים, חברים נאמנים, וחיים של פרוח — כל זה צדקה של מעשר מבטיחה.</p>
+            </div>
+            
+            <div class="promise-card">
+                <h3>🛡️ הצלה מצרה</h3>
+                <p>במעת צרה, המעשר שומר — שונים מורחקים, צרות עוברות, והשם עוזר דרך כל הדרכים.</p>
+            </div>
+        </div>
+        
+        <h2>סיפור של ברכה — "משומר המעשר"</h2>
+        <div class="story-box">
+            <h3>סיפור אמת מחיינו</h3>
+            <p>היה ביהודה עסקן שנאבק בעסקיו הרבה שנים. הוא היה אדם ירא שמיים, אך בעסקיו פחד תמיד — פחד מהודות, פחד מהמעשה שלא יספיק.</p>
+            
+            <p>יום אחד, פגש אתו תלמיד חכם וסיפר לו על מעשר כספים. הוא אמר לו: "אם אתה שומר מעשר, אתה משים על עסקיך את ברכת השם."</p>
+            
+            <p>הוא החליט לנסות. החל להוציא עשרון מכל הכנסה — בקשיים, בטובות, בהכל.</p>
+            
+            <div class="story-quote">
+                "בשנה הראשונה, עסקיי לא גדלו במיוחד, אך הרוח שלי התחזקה. בשנה השנייה, החלו להגיע לי לקוחות חדשים. בשנה השלישית, עסקיי גדל בשליש!"
+            </div>
+            
+            <p>אמר לי בעצמו: "אני יודע שלא זה מקרה. זה המעשר שלי, זה ברכת השם. כל פעם שאני מעשר, אני מרגיש שיותר הברכה באה לחיי."</p>
+        </div>
+        
+        <h2>כיצד משומרים מעשר?</h2>
+        <div class="maaser-methods">
+            <div class="method">
+                <h3>1️⃣ חישוב מדוקדק</h3>
+                <p>חשב עשרון מ-כל הכנסה תקנית (אחרי הוצאות עסק, אך לפני מס כנסה).</p>
+                <div class="details">דוגמה: אם הכנסתך החודשית היא 10,000 ש"ח, המעשר הוא 1,000 ש"ח.</div>
+            </div>
+            
+            <div class="method">
+                <h3>2️⃣ עמודי מעשר</h3>
+                <p>שמור רשימה — כמה הוצאת, לאן הוצאת, ולמטרה מה.</p>
+                <div class="details">זה עוזר לך להיות מודע, מאומת, ופקוד ברוחך.</div>
+            </div>
+            
+            <div class="method">
+                <h3>3️⃣ תן לישיר או דרך הכולל</h3>
+                <p>תוכל להעביר מעשר ישירות למוקדים שתומכים בתורה, או דרך הכולל שלנו.</p>
+                <div class="details">אנחנו מטפלים בהעברה בטוחה ובמועילה לישיבות וכוללים.</div>
+            </div>
+            
+            <div class="method">
+                <h3>4️⃣ הקדשה מיוחדת</h3>
+                <p>אתה יכול להקדיש מעשר ל-צורך ספציפי: לאברך מסוים, לכולל מסוים, או לתלמידי ישיבה.</p>
+                <div class="details">הקדשה מיוחדת מגבירה את הברכה ויוצרת קשר אישי.</div>
+            </div>
+        </div>
+        
+        <div class="calculation-help">
+            <h3>🧮 סיוע חישוב — כמה אני צריך להוציא?</h3>
+            <p><strong>אם הכנסתך החודשית:</strong></p>
+            <p>• 5,000 ש"ח → מעשר = 500 ש"ח</p>
+            <p>• 10,000 ש"ח → מעשר = 1,000 ש"ח</p>
+            <p>• 20,000 ש"ח → מעשר = 2,000 ש"ח</p>
+            <p><strong>זכור:</strong> זו לא הוצאה של כלות, זו הוצאה שמחבירה אותך לברכה.</p>
+        </div>
+        
+        <div class="rabbi-advice">
+            <h3>💬 ייעוץ רב — סיוע אישי</h3>
+            <p>אם אתה לא בטוח כמה להוציא, או איך לחשב מעשר ממקורות הכנסה מורכבים — <strong>אנו מציעים ייעוץ אישי חינם</strong>.</p>
+            <p>הרב רפאל רפאלי שליט"א יכול לדבר אתך בדברים אלו בעצמיות, בלי לנכות משנונית, ו-בלחץ. תוכל להגיע להחלטה שהיא נכונה ועמוקה לחייך.</p>
+        </div>
+        
+        <h2>המעשר אינו הוצאה — זו בנייה</h2>
+        <p>כאשר אתה מעשר, אתה בונה. אתה בונה ברכה על ביתך. אתה בונה קשר עם אלוקים. אתה בונה שותפות עם לומדי תורה שהם משנים את העולם. ובנייה זו לא נפגעת — היא עצמה הברכה הגדולה.</p>
+        
+        <div class="cta-section">
+            <h2>בואו נהיה שותפים</h2>
+            <p>אם אתה מעוניין ללמוד עוד על מעשר, להדריך בחישוב, או להתחיל להוציא מעשר דרכנו — אנחנו כאן עבורך.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-primary">צור קשר להנחיה אישית</a>
+                <a href="/hachzakat-avrech" class="btn btn-secondary">תן מעשר עכשיו</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>כולל שערי מרדכי | רחוב רשב"ם 8, ירושלים</p>
+        <p>📞 02-3204296 | 💬 054-844-2297</p>
+        <p>✉️ <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 כולל שערי מרדכי | <a href="/privacy">מדיניות פרטיות</a> | <a href="/negishut">נגישות</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הכוללים שלנו | כולל שערי מרדכי</title>
+    <meta name="description" content="הכירו את 4 הכוללים ברשת שערי מרדכי — כל אחד מתמחה בתחום ייחודי של לימוד תורה בהנהגת הרב רפאל רפאלי.">
+    <meta name="keywords" content="כוללים בירושלים, כולל שערי מרדכי, לימוד תורה, כולל אברכים, רשת כוללים">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f3e8;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #c29a45;
+        }
+        
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #c29a45;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background-color: #0e1c36;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #c29a45;
+        }
+        
+        nav a {
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e8d4b8;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+        
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: #0e1c36;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-right: 4px solid #c29a45;
+            padding-right: 1rem;
+        }
+        
+        .intro {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .kollel-card {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 6px;
+            border-right: 4px solid #c29a45;
+            transition: transform 0.3s;
+        }
+        
+        .kollel-card:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 4px 12px rgba(194, 154, 69, 0.15);
+        }
+        
+        .kollel-card h3 {
+            color: #0e1c36;
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .kollel-card .specialty {
+            color: #c29a45;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-box {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: 6px;
+        }
+        
+        .stat-number {
+            color: #c29a45;
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: #0e1c36;
+            font-weight: 600;
+        }
+        
+        .internal-links {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+        }
+        
+        .internal-links h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .internal-links a {
+            display: block;
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+        
+        .internal-links a:hover {
+            color: #0e1c36;
+        }
+        
+        .cta-section {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: #c29a45;
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .cta-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e8d4b8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #c29a45;
+            border: 2px solid #c29a45;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        footer {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>הכוללים שלנו</h1>
+        <p>רשת של מוקדי לימוד תורה בירושלים</p>
+    </header>
+    
+    <nav>
+        <a href="/">בית</a>
+        <a href="/about">אודות</a>
+        <a href="/kollelim">הכוללים</a>
+        <a href="/hachzakat-avrech">החזקת אברך</a>
+        <a href="/contact">צור קשר</a>
+    </nav>
+    
+    <main>
+        <div class="intro">
+            <h2>רשת שערי מרדכי — מטרה משותפת</h2>
+            <p>כולל שערי מרדכי הוא רשת של מוקדי לימוד תורה המשלבים בין עומק בלימוד לבין אווירה של קדושה וריכוז. כל כולל בתוכנו מתמחה בתחום ייחודי של לימוד תורה, אך כולנו מתוכננים בתוך חזון אחד: ליצור סביבה בה התורה חיה, בה לומדים משקדשים את זמנם לעבודת השם, ובה משתתפים — לומדים ומחזיקים כאחד — הם שותפים בזיקה נצחית לאלוקים וישראל.
+            </p>
+            <p style="margin-top: 1rem;">בהנהגת הרב רפאל רפאלי שליט"א, רוח הרשת היא: <strong>חכמה, יראה, וודאות שעל ידי לימוד תורה אנו משנים את העולם.</strong></p>
+        </div>
+        
+        <h2>4 הכוללים ברשתנו</h2>
+        
+        <div class="kollel-card">
+            <h3>הכולל הראשי</h3>
+            <div class="specialty">תורה גדולה לאברכים</div>
+            <p>הכולל הראשי של רשתנו פותח לאברכים את שער הלימוד העמוק. כאן, בני הישיבות המעולים וגברים השואפים להעמיק בתורה שלום משקדשים זמן לימוד יומי, בתוך קהילה של דורשי אלוקים. הלימוד כאן משלב בין גמרא, הלכה, וכולי אדם — בעבור אלו שרוצים לבנות בסיס תורני מוצק לכל חייהם.</p>
+        </div>
+        
+        <div class="kollel-card">
+            <h3>כולל יום שישי</h3>
+            <div class="specialty">הכנה לשבת ודיוק בתורה</div>
+            <p>יום שישי הוא יום קדוש, ויום קדוש דורש הכנה מיוחדת. בכולל יום שישי, נוצר מרחב בו לומדים אברכים ופקידים משלבים בין עמוק בלימוד לבין קדושת היום. בסיום הלימוד, משפחת הכולל נפגשת לארוחה קודשת המלאה בחיוך, בברכות, ובעבודת אלוקים. זה לא סתם כולל — זה קישור ישיר לשבת הקדושה.</p>
+        </div>
+        
+        <div class="kollel-card">
+            <h3>כולל חצות</h3>
+            <div class="specialty">תפילה בשעת גזרות</div>
+            <p>בחצות הלילה, כשהעולם ישן, קול תפילה עולה משומר הכולל שלנו. כולל חצות הוא מוקד קדוש בו חברים וגברים משקדשים את שעות הלילה לתיקון חצות — תפילה עתיקה על טובת כלל ישראל. זה לא רק לימוד; זה עבודה רוחנית בקדושה מיוחדת שאין לה תחילה בעולם.</p>
+        </div>
+        
+        <div class="kollel-card">
+            <h3>כולל לילה</h3>
+            <div class="specialty">לימוד ערב וברכות</div>
+            <p>לימוד בלילה הוא צורה של הקדשה עמוקה. בכולל לילה, גברים — פקידים, אברכים, ובחורים — מתגבשים לסדר לימוד קבוע בשעות הערב. בתוך שקט יחסי של הלילה, הלימוד הופך עמוק יותר, הדברים חודרים לנשמה, וההתחברות לתורה הופכת למעשית וקרובה לעצם הנשמה.</p>
+        </div>
+        
+        <h2>מספרים שמספרים סיפור</h2>
+        <div class="stats">
+            <div class="stat-box">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">לומדים פעילים</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">שנות קיום</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4</div>
+                <div class="stat-label">כוללים ברשת</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">השפעה על נשמות</div>
+            </div>
+        </div>
+        
+        <h2>ההנהגה</h2>
+        <p>כל הרשת נמצאת בהנהגת <strong>הרב רפאל רפאלי שליט"א</strong>, רוח מנהיגית בעל חזון תורני עמוק וחום אישי. בחסותו, כל כולל מפתח את זהותו הייחודית תוך השמירה על אחדות הרשת וחזון המשותף.</p>
+        
+        <div class="internal-links">
+            <h3>למד עוד על כל כולל:</h3>
+            <a href="/kollel-yom-shishi">→ כולל יום שישי</a>
+            <a href="/tikun-chatzot">→ תיקון חצות</a>
+            <a href="/limud-balayla">→ לימוד בלילה</a>
+            <a href="/hachzakat-torah">→ החזקת התורה</a>
+        </div>
+        
+        <h2>כיצד לשמור על הרשת</h2>
+        <p>כוללנו קיים בזכות התמיכה של מחזיקים נדיבים — גברים ונשים שרואים בתמיכה בתורה את השקעתם הנצחית. אם אתה מעוניין להפוך למחזיק, להעמיק בלימוד בעצמך, או פשוט להכיר את הרשת יותר טוב, אנחנו כאן בשבילך.</p>
+        
+        <div class="cta-section">
+            <h2>בואו נבנה ביחד</h2>
+            <p>בין אם אתה מעוניין ללמוד בעצמך, לתמוך בלומדים אחרים, או רק ללמוד עוד על הרשת שלנו — יש לנו מקום עבורך.</p>
+            <div class="cta-buttons">
+                <a href="/hachzakat-avrech" class="btn btn-primary">תמוך בלומדים</a>
+                <a href="/contact" class="btn btn-secondary">צור קשר</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>כולל שערי מרדכי | רחוב רשב"ם 8, ירושלים</p>
+        <p>📞 02-3204296 | 💬 054-844-2297</p>
+        <p>✉️ <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 כולל שערי מרדכי | <a href="/privacy">מדיניות פרטיות</a> | <a href="/negishut">נגישות</a></p>
+    </footer>
+</body>
+</html>

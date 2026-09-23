@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לימוד בלילה | כולל שערי מרדכי</title>
+    <meta name="description" content="תכנית לימוד ערב לפקידים ואברכים. התחברות לתורה בשעות של שקט וריכוז בירושלים.">
+    <meta name="keywords" content="לימוד בלילה, כולל ערב, לימוד תורה בלילה, תכנית לימוד">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f3e8;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #c29a45;
+        }
+        
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #c29a45;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background-color: #0e1c36;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #c29a45;
+        }
+        
+        nav a {
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e8d4b8;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+        
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: #0e1c36;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-right: 4px solid #c29a45;
+            padding-right: 1rem;
+        }
+        
+        .intro-box {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .why-evening {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .benefit-card {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .benefit-card h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .study-program {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .program-item {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .program-item h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .program-item .time {
+            color: #c29a45;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .topics-list {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .topics-list h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .topics-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .topics-list li {
+            padding: 0.5rem 0;
+            padding-right: 1.5rem;
+        }
+        
+        .topics-list li:before {
+            content: "✡ ";
+            color: #c29a45;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .teachers {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .teachers h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .teacher-note {
+            background-color: #e8d4b8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .participation-options {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .option {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .option h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .support-materials {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .support-materials h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .support-materials ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .support-materials li {
+            padding: 0.5rem 0;
+            padding-right: 1.5rem;
+        }
+        
+        .support-materials li:before {
+            content: "→ ";
+            color: #c29a45;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .connection-personal {
+            background-color: #e8d4b8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        
+        .connection-personal h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .cta-section {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: #c29a45;
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .cta-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e8d4b8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #c29a45;
+            border: 2px solid #c29a45;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        footer {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            .why-evening {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>לימוד בלילה</h1>
+        <p>מוקד הלימוד בשעות ערב</p>
+    </header>
+    
+    <nav>
+        <a href="/">בית</a>
+        <a href="/about">אודות</a>
+        <a href="/kollelim">הכוללים</a>
+        <a href="/hachzakat-avrech">החזקת אברך</a>
+        <a href="/contact">צור קשר</a>
+    </nav>
+    
+    <main>
+        <div class="intro-box">
+            <h2 style="margin-top: 0; border-right: none;">הלילה הוא לימוד</h2>
+            <p>כשהשמש שוקעת על ירושלים והעולם נהנה מתנוחה, דלתות כולל הערב שלנו נפתחות לפקידים, אברכים, וגברים השואפים להעמיק בתורה. בשעות הערב, בשקט היחסי של הלילה, לימוד התורה הופך לתהליך עמוק יותר, אישי יותר, וקרוב יותר לנשמה.</p>
+        </div>
+        
+        <h2>למה לימוד בלילה?</h2>
+        <div class="why-evening">
+            <div class="benefit-card">
+                <h3>🌙 שקט ריכוז</h3>
+                <p>בערב, אחרי יום עמל, ההנעה יותר פנימית וההשקעה יותר עמוקה.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>🔗 קשר עמוק</h3>
+                <p>בלילה מתגבשת אווירה בה התורה לא רק מדע אלא חוויה רוחנית.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>👥 קהילה חמה</h3>
+                <p>לומדים שנפגשים בערב הם קהילה מסוגרת הבנויה על תא וקשר.</p>
+            </div>
+            
+            <div class="benefit-card">
+                <h3>⏰ משך טוב</h3>
+                <p>שעות של ערב מאפשרות לימוד ממותק ללא חפזון.</p>
+            </div>
+        </div>
+        
+        <h2>תכנית הלימוד</h2>
+        <div class="study-program">
+            <div class="program-item">
+                <h3>📖 גמרא עמוקה</h3>
+                <p>לימוד של סוגיה אחת בעיון, בשאלות, בדברי קומנטטורים.</p>
+                <div class="time">שעה ראשונה של הערב</div>
+            </div>
+            
+            <div class="program-item">
+                <h3>📕 הלכה מעשית</h3>
+                <p>יישום ההלכה לחיינו היום-יומיים, שאלות ודיונים.</p>
+                <div class="time">שעה שנייה</div>
+            </div>
+            
+            <div class="program-item">
+                <h3>📘 דברי מוסר וספרות</h3>
+                <p>קריאה בדברי חכמים על עבודת השם, על חיים בתורה.</p>
+                <div class="time">סוף הערב</div>
+            </div>
+        </div>
+        
+        <h2>נושאי הלימוד</h2>
+        <div class="topics-list">
+            <h3>מה אנחנו למדים?</h3>
+            <ul>
+                <li>גמרא — מקצועות שונים לפי התכנית השנתית</li>
+                <li>מהלכה — הלכות מעשיות ויומיומיות</li>
+                <li>מוסר — משיחות חכמים על התורה הטהורה</li>
+                <li>מושגים קדומים — אלקות, עבודת אלוקים, התיקון</li>
+                <li>שאלות עם — שאלות רעיוניות ופילוסופיות בתורה</li>
+            </ul>
+        </div>
+        
+        <h2>את הנהגת הלימוד</h2>
+        <div class="teachers">
+            <h3>מי מנהל את הכולל?</h3>
+            <div class="teacher-note">
+                <strong>הרב רפאל רפאלי שליט"א</strong> — מנהל כללי ודורש עמוק. הרב פוגש אברכים, עוזר לקבוע תוכנית לימוד מתאימה, וממנהל תיקון רוחני לכולל.
+            </div>
+            <div class="teacher-note">
+                <strong>מנחים ובעלי בתים</strong> — כולל הערב מתוח על ידי מנחים מנוסים בעלי ידע עמוק בגמרא ובהלכה, ובעלי אהבה לכל לומד.
+            </div>
+        </div>
+        
+        <h2>מי יכול להשתתף?</h2>
+        <div class="intro-box">
+            <p><strong>כולל הערב שלנו פתוח לכל אברך</strong> — בין אם אתה מלומד בישיבה, בחור שלומד בעצמו, מעביד חפץ בלימוד אחרי שעות עבודה, או פשוט גבר השואף להעמיק בתורה.</p>
+            <p style="margin-top: 1rem;">אנחנו מקבלים:</p>
+            <ul style="list-style: none; margin-top: 0.5rem;">
+                <li>✡ אברכים — לומדים בעומק</li>
+                <li>✡ בחורים — צעירים אשר רוצים ללמוד עם קבוצה</li>
+                <li>✡ מעבידים — גברים אחרי עבודה החפצים בלימוד</li>
+                <li>✡ כל זה — בכל רמה של ידע</li>
+            </ul>
+        </div>
+        
+        <h2>דרכי השתתפות</h2>
+        <div class="participation-options">
+            <div class="option">
+                <h3>🔄 משתתף קבוע</h3>
+                <p>בא כל ערב (או לילות מסוימים בשבוע) ודקדוק בלימוד קבוע עם אותה קבוצה.</p>
+            </div>
+            
+            <div class="option">
+                <h3>🔁 משתתף גמיש</h3>
+                <p>בא לפי זמינותך — אתה תמיד יוצא רגע בו יכול להצטרף ללימוד.</p>
+            </div>
+            
+            <div class="option">
+                <h3>📞 טלפוני או וידיאו</h3>
+                <p>אם אתה רחוק או לא יכול להגיע פיזית, אתה יכול להצטרף לפי זום או טלפון.</p>
+            </div>
+            
+            <div class="option">
+                <h3>💪 תמיכה מחומרים</h3>
+                <p>תן תרומה לספרים, חומרים לימוד, קפה וחטיף להלומדים.</p>
+            </div>
+        </div>
+        
+        <h2>חומרי הלימוד שלנו</h2>
+        <div class="support-materials">
+            <h3>אנחנו מספקים:</h3>
+            <ul>
+                <li>חומרי לימוד כתובים — דפי הלימוד עם קומנטטורים</li>
+                <li>ספרים — גמרא, מפרשים, ספרי הלכה</li>
+                <li>מחברות — כל לומד מקבל מחברת לחידושים שלו</li>
+                <li>קפה וחטיף — כי לימוד בלילה דורש כוח</li>
+                <li>חיזוקים — דברים לבביים מהרב</li>
+            </ul>
+        </div>
+        
+        <div class="connection-personal">
+            <h3>💬 קשר אישי עם הרב והמנחים</h3>
+            <p>כל לומד מקבל את ההתמודדות המלאה של הרב ושל המנחים. אם יש לך שאלה, אם אתה מתקשה בסוגיה, או אם אתה צריך עצה אישית על הלימוד שלך — אנחנו כאן.</p>
+        </div>
+        
+        <div class="cta-section">
+            <h2>בואו תלמדו איתנו</h2>
+            <p>לימוד בלילה הוא הזדמנות להעמיק בתורה, להתחבר לקהילה, ולעבוד על נשמתך בשעות של קדושה.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-primary">צור קשר להצטרפות</a>
+                <a href="/hachzakat-avrech" class="btn btn-secondary">תמוך בלומדים</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>כולל שערי מרדכי | רחוב רשב"ם 8, ירושלים</p>
+        <p>📞 02-3204296 | 💬 054-844-2297</p>
+        <p>✉️ <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 כולל שערי מרדכי | <a href="/privacy">מדיניות פרטיות</a> | <a href="/negishut">נגישות</a></p>
+    </footer>
+</body>
+</html>

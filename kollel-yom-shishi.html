@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כולל יום שישי | שערי מרדכי</title>
+    <meta name="description" content="כולל מיוחד ביום שישי המשלב בין לימוד עמוק לבין הכנה ל-שבת. מטרתנו: שיא של קדושה והתכנסות רוחנית.">
+    <meta name="keywords" content="כולל יום שישי, הכנה לשבת, לימוד תורה שבת, ארוחה קודשת">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f3e8;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #c29a45;
+        }
+        
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #c29a45;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background-color: #0e1c36;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #c29a45;
+        }
+        
+        nav a {
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e8d4b8;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+        
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: #0e1c36;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-right: 4px solid #c29a45;
+            padding-right: 1rem;
+        }
+        
+        .quote {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-right: 4px solid #c29a45;
+            font-style: italic;
+            color: #0e1c36;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        
+        .timeline {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .timeline-item {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            align-items: flex-start;
+        }
+        
+        .timeline-time {
+            background-color: #c29a45;
+            color: #0e1c36;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: 700;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .timeline-content {
+            flex: 1;
+        }
+        
+        .timeline-content h3 {
+            color: #0e1c36;
+            margin-bottom: 0.3rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-box {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .feature-box h3 {
+            color: #c29a45;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-highlight {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .meal-info {
+            background-color: #e8d4b8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        
+        .meal-info h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .meal-highlights {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .meal-highlights li {
+            margin: 0.5rem 0;
+            padding-right: 1.5rem;
+        }
+        
+        .meal-highlights li:before {
+            content: "✡ ";
+            color: #0e1c36;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .participation-methods {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .method {
+            background-color: #fff;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .method h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .cta-section {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: #c29a45;
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .cta-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e8d4b8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #c29a45;
+            border: 2px solid #c29a45;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        footer {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-time {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>כולל יום שישי</h1>
+        <p>הכנה לשבת ודיוק בתורה</p>
+    </header>
+    
+    <nav>
+        <a href="/">בית</a>
+        <a href="/about">אודות</a>
+        <a href="/kollelim">הכוללים</a>
+        <a href="/hachzakat-avrech">החזקת אברך</a>
+        <a href="/contact">צור קשר</a>
+    </nav>
+    
+    <main>
+        <div class="quote">
+            "שמור את יום השבת לקדשו" — בואו נכן אותו יחד בעמוק, בלימוד, ובקדושה.
+        </div>
+        
+        <h2>למה יום שישי?</h2>
+        <p>יום שישי אינו יום רגיל. הוא היום בו השבוע מגיע לשיאו, בו השמיים קרובים יותר, ובו בחירנו עומדים על סף הקדושה הגדולה. בדברי חז"ל, יום שישי מכיל בתוכו את כוח השבת, ולכן הוא דורש הכנה מיוחדת — הכנה של נשמה, הכנה של דעת, הכנה של קדושה.</p>
+        
+        <p>כולל יום שישי שלנו פותח את שעריו לגברים וקהילה השואפים להעמיק בלימוד תורה בעת ובעונה אחת שהוא משכלל את ההכנה ליום הקדוש.</p>
+        
+        <h2>לוח הזמנים — יום בן-יום</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-time">08:00</div>
+                <div class="timeline-content">
+                    <h3>פתיחה ותפילת שחרית</h3>
+                    <p>נפגשים בשקט הבוקר, מתכננים את היום בתפילה של כוונה.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">08:30</div>
+                <div class="timeline-content">
+                    <h3>לימוד עומק</h3>
+                    <p>שני שעות של לימוד גמרא, הלכה, ודברי חכמים בעיון עמוק.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">10:30</div>
+                <div class="timeline-content">
+                    <h3>הפסקה קטנה וקפה</h3>
+                    <p>רגע של הנשמה, שיחה עם חברים, עדכון הנשמה.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">11:00</div>
+                <div class="timeline-content">
+                    <h3>לימוד המשך</h3>
+                    <p>שעה נוספת של לימוד, בעיון חדש ובהנעה שונה.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">13:00</div>
+                <div class="timeline-content">
+                    <h3>ארוחה קודשת ודברי תורה</h3>
+                    <p>מתאספים לארוחה עתירת משמעות, הרחבות בתורה, ודברים לבביים.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-time">14:30</div>
+                <div class="timeline-content">
+                    <h3>סיום יום הכנה לשבת</h3>
+                    <p>ברכה ופתיחת הדלת לשבת הקדושה עם לב מוכן ונשמה אשר למדה.</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2>מה עושה את כולל יום שישי לייחודי?</h2>
+        <div class="features">
+            <div class="feature-box">
+                <h3>🔗 שילוב תורה ושבת</h3>
+                <p>אנו מלמדים לא רק תורה, אלא שילוב של תורה עם הכנה לשבת הקדושה.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>🙏 אווירה קדושה</h3>
+                <p>בכולל שלנו, כל רגע מטוען בקדושה ובכוונה לאלוקים.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>👥 קהילה חמה</h3>
+                <p>קבוצה של גברים ונשים השואפים להיות יחד במטרה אחת.</p>
+            </div>
+            
+            <div class="feature-box">
+                <h3>🎓 דיוק בתורה</h3>
+                <p>לימוד עמוק ודקדקני בתורה עם מנחים בעלי ידע וכוונה.</p>
+            </div>
+        </div>
+        
+        <div class="meal-info">
+            <h3>✨ הארוחה הקודשת — לב הכולל</h3>
+            <p>בסיום לימוד הבוקר, מתאספים אברכים, פקידים, וחברים כדי לשתות יחד ארוחה של קדושה. האווירה אינה של ארוחה רגילה — היא של משפחה בעת הכנה למשהו גדול יותר.</p>
+            <ul class="meal-highlights">
+                <li>דברי תורה המדברים לנשמה</li>
+                <li>שירה ותפילה משותפת</li>
+                <li>קשר עמוק בין משתתפים</li>
+                <li>התכנסות רוחנית לקראת השבת</li>
+            </ul>
+        </div>
+        
+        <h2>מי יכול להשתתף?</h2>
+        <div class="section-highlight">
+            <p><strong>כולל יום שישי שלנו פתוח לכל גבר בעל רצון</strong> — בין אם אתה אברך המחפש קהילה, בחור מישיבה, מעביד חפץ בלימוד, או פשוט איש המחפש קדושה. אם אתה רוצה לעמוק בתורה ולהכין את הלב שלך ליום הקדוש, יש לנו מקום עבורך.</p>
+            <p style="margin-top: 1rem;"><strong>בנות ונשים</strong> יכולות להשתתף בחלקים מסוימים של התכנית (מבחינת הלימוד וחלק מהארוחה) — אנא צרו קשר לפרטים.</p>
+        </div>
+        
+        <h2>דרכי השתתפות</h2>
+        <div class="participation-methods">
+            <div class="method">
+                <h3>📅 משתתף קבוע</h3>
+                <p>בא כל שישי, חלק מלא בתכנית היומית, בן חברה הקבוע שלנו.</p>
+            </div>
+            
+            <div class="method">
+                <h3>🔄 משתתף גמיש</h3>
+                <p>בא בשישים שאתה יכול, חלק מלא כמו משתתף קבוע בשעות הנוכחות שלך.</p>
+            </div>
+            
+            <div class="method">
+                <h3>💪 תומך פעיל</h3>
+                <p>תרום לתמיכה בכולל שלנו — הוצאות, ספרים, או ארוחה — והיה שותף בברכה.</p>
+            </div>
+            
+            <div class="method">
+                <h3>📞 צור קשר ראשון</h3>
+                <p>אם אתה מעוניין ללמוד עוד או להצטרף בשישי הקרוב, צרו קשר עם הנהגת הכולל.</p>
+            </div>
+        </div>
+        
+        <h2>השיחה עם הרב</h2>
+        <p>הרב רפאל רפאלי שליט"א הוא מנהל הכולל ודורש של דברים עמוקים בתורה. אם אתה מעוניין בייעוץ אישי על הלימוד שלך, על החיים שלך, או על הדרך לעבודת אלוקים, הוא זמין לשיחה עמוקה.</p>
+        
+        <div class="cta-section">
+            <h2>בואו נכין את השבת ביחד</h2>
+            <p>יום שישי הוא יום מיוחד, וכולל יום שישי שלנו הוא מקום מיוחד בו תוכל להעמיק בתורה, להתחבר לקהילה, ולהכין את הנשמה לקדושה.</p>
+            <div class="cta-buttons">
+                <a href="/contact" class="btn btn-primary">צרו קשר להצטרפות</a>
+                <a href="/hachzakat-avrech" class="btn btn-secondary">תמכו בכולל</a>
+            </div>
+        </div>
+        
+        <div class="section-highlight">
+            <p style="text-align: center; font-weight: 600; color: #0e1c36;">
+                "שבת שלום יום שישי" — בוא תשמור על קדושת יום זה ביחד איתנו.
+            </p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>כולל שערי מרדכי | רחוב רשב"ם 8, ירושלים</p>
+        <p>📞 02-3204296 | 💬 054-844-2297</p>
+        <p>✉️ <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 כולל שערי מרדכי | <a href="/privacy">מדיניות פרטיות</a> | <a href="/negishut">נגישות</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מעלת המחזיקים | כולל שערי מרדכי</title>
+    <meta name="description" content="המחזיק בתורה שותף נצחי בחיי הלומד. הבטחות ברכה ונחמה לאלו התומכים בתורה.">
+    <meta name="keywords" content="מעלת המחזיקים, שותפות בתורה, יששכר וזבולון, תמיכה בתורה">
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;700&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: #f8f3e8;
+            color: #1a1a1a;
+            line-height: 1.8;
+        }
+        
+        header {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid #c29a45;
+        }
+        
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #c29a45;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        nav {
+            background-color: #0e1c36;
+            padding: 1rem;
+            text-align: center;
+            border-top: 1px solid #c29a45;
+        }
+        
+        nav a {
+            color: #c29a45;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e8d4b8;
+        }
+        
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 3rem;
+        }
+        
+        h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            color: #0e1c36;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem;
+            border-right: 4px solid #c29a45;
+            padding-right: 1rem;
+        }
+        
+        .intro-inspiration {
+            background-color: #e8d4b8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #0e1c36;
+        }
+        
+        .torah-story {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .torah-story h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .story-text {
+            font-style: italic;
+            color: #333;
+            margin: 1rem 0;
+        }
+        
+        .interpretation {
+            background-color: #e8d4b8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+            border-right: 3px solid #0e1c36;
+        }
+        
+        .blessings {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .blessing-card {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-right: 3px solid #c29a45;
+            transition: transform 0.3s;
+        }
+        
+        .blessing-card:hover {
+            transform: translateX(-5px);
+        }
+        
+        .blessing-card h3 {
+            color: #c29a45;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .partnership-explanation {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .partnership-points {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .partnership-points li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background-color: #fff;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+            padding-right: 1.5rem;
+        }
+        
+        .partnership-points li:before {
+            content: "✓";
+            color: #c29a45;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .how-to-support {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+        }
+        
+        .support-method {
+            background-color: #fff;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            border-right: 3px solid #c29a45;
+        }
+        
+        .support-method h3 {
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+        }
+        
+        .personal-connection {
+            background-color: #e8d4b8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+        }
+        
+        .personal-connection h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        
+        .personal-connection p {
+            margin: 0.5rem 0;
+        }
+        
+        .guarantee {
+            background-color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border-right: 4px solid #c29a45;
+            text-align: center;
+        }
+        
+        .guarantee h3 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .guarantee p {
+            color: #0e1c36;
+            font-weight: 500;
+            line-height: 1.8;
+        }
+        
+        .testimony {
+            background-color: #f8f3e8;
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 1.5rem 0;
+            border-right: 4px solid #c29a45;
+            font-style: italic;
+        }
+        
+        .cta-section {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            padding: 2rem;
+            border-radius: 6px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: #c29a45;
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .cta-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e8d4b8;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: #c29a45;
+            border: 2px solid #c29a45;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #c29a45;
+            color: #0e1c36;
+        }
+        
+        footer {
+            background-color: #0e1c36;
+            color: #f8f3e8;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            main {
+                padding: 1.5rem;
+            }
+            
+            .blessings {
+                grid-template-columns: 1fr;
+            }
+            
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>מעלת המחזיקים</h1>
+        <p>השותפות הנצחית בתורה</p>
+    </header>
+    
+    <nav>
+        <a href="/">בית</a>
+        <a href="/about">אודות</a>
+        <a href="/kollelim">הכוללים</a>
+        <a href="/hachzakat-avrech">החזקת אברך</a>
+        <a href="/contact">צור קשר</a>
+    </nav>
+    
+    <main>
+        <div class="intro-inspiration">
+            <p style="font-size: 1.1rem;">המחזיק בתורה אינו רק תורם. הוא שותף נצחי בחיי לומדי התורה, בברכתם, בהצלחתם, ובשכר עולם הבא. זו הבטחה תורנית עתיקה: כל מי שתומך בתורה — זוכה לברכה שאין לה סוף.</p>
+        </div>
+        
+        <h2>יששכר וזבולון — הדוגמה הנצחית</h2>
+        <div class="torah-story">
+            <h3>סיפור התורה:</h3>
+            <p class="story-text">
+                "שנים מבני יעקב חלקו את התפקידים בתוך המשפחה: יששכר היה לומד תורה ועמוק בידע השם, וזבולון היה סוחר המסחר בים וברכוש. התנאי שלהם היה: זבולון יתמוך בלומד התורה, ויששכר ילמד בעבורו ובעבור קנין הזבולון."
+            </p>
+            <div class="interpretation">
+                התוצאה: שניהם זכו בברכה זהה. אם"כ, אלו שתומכים בתורה זוכים לאותה חלק בשכר, בברכה, ובעלייה רוחנית כמו הלומדים עצמם!
+            </div>
+        </div>
+        
+        <h2>המחזיק הוא שותף — לא סתם תורם</h2>
+        <div class="partnership-explanation">
+            <p>כל מי שתומך בתורה הוא הופך למחזיק בחיי הלומד. הוא הופך להיות חלק מן הצעדים שנותנים, מן העיון שנלמד, מן המלאכה הרוחנית המתרחשת. המחזיק לא רק משלח כסף — הוא משלח אהבה, תקווה, וברכה.</p>
+            
+            <ul class="partnership-points">
+                <li><strong>שותף בלימוד:</strong> כל שיעור, כל שעת עיון, היא בעבורך.</li>
+                <li><strong>שותף בברכה:</strong> כל ברכה שנופלת על הלומד — חלקה הוא שלך.</li>
+                <li><strong>שותף בשכר עולם הבא:</strong> הלומד וההתומך משתתפים יחד בשכר הנצחי.</li>
+                <li><strong>שותף בתקומה:</strong> בכל פעם שתורה משנה ושיפור עולה בעולם — חלקך בו.</li>
+            </ul>
+        </div>
+        
+        <h2>5 הבטחות ברכה למחזיק</h2>
+        <div class="blessings">
+            <div class="blessing-card">
+                <h3>💰 ברכה בעושר</h3>
+                <p>דברי חכמים מבטיחים שהתומך בתורה לא יחסיר אף פעם — הברכה תגדל על כל מה שיש לו.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <h3>👨‍👩‍👧 ברכה בבנים</h3>
+                <p>בנים ובנות תלמידי חכמים, ילדים בעלי מוסר יפה וחכמה, הם תוכן בעבור המחזיק.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <h3>🛡️ הצלה מפחדים</h3>
+                <p>המחזיק בתורה מוגן מכל רע, משונאים נדלקים ממנו, וטרחות עוברות לצדו.</p>
+            </div>
+            
+            <div class="blessing-card">
+                <h3>🕊️ שלום נשמה</h3>
+                <p>קול הנשמה נהיה מיוחד כאשר יודעת שהיא משתתפת בתורה שמחדשה את הקיום.</p>
+            </div>
+        </div>
+        
+        <h2>דרכי תמיכה בתורה</h2>
+        <div class="how-to-support">
+            <div class="support-method">
+                <h3>💵 תמיכה חודשית</h3>
+                <p>תן תרומה קבועה מדי חודש. סכום בו תוכל להחזיק לוגי אברך, או לתמוך בכולל מסוים.</p>
+            </div>
+            
+            <div class="support-method">
+                <h3>📖 הקדשת יום לימוד</h3>
+                <p>הקדש יום שלם של לימוד לעילוי נשמה של אחד מאהוביך, או לתהילתך שלך.</p>
+            </div>
+            
+            <div class="support-method">
+                <h3>📚 תרומת ספרים וחומרים</h3>
+                <p>תן ספר לימוד, קונקורדנציה, או כל חומר הדרוש ללומדים.</p>
+            </div>
+            
+            <div class="support-method">
+                <h3>🏠 תמיכה בהוצאות כולל</h3>
+                <p>תן לתמיכה בשכר המנחים, בשכרת המקום, בחשמל ובחום — כל הוצאה הקשורה.</p>
+            </div>
+            
+            <div class="support-method">
+                <h3>🤝 תמיכה אישית</h3>
+                <p>אם תוכל, הפוך ללוגי אברך מסוים. היות המחזיק שלו, קשר אישי אתו, תמיכה בחייו.</p>
+            </div>
+        </div>
+        
+        <div class="personal-connection">
+            <h3>💬 הקשר האישי עם הלומד</h3>
+            <p><strong>כל מחזיק מקבל עדכון אישי מהלומד שלו.</strong> אתה תקבל מכתבים, סיפורים על התקדמותו, על השפעתו, על חייו. זה קשר אישי ממשי, לא סתם טרנזקציה כלכלית.</p>
+            <p>זה מה שהופך את התמיכה לשותפות אמיתית.</p>
+        </div>
+        
+        <h2>סיפור אמיתי — מחזיק שראה ברכה</h2>
+        <div class="testimony">
+            "הייתי סוחר קטן לשנים רבות, ודי התקשיתי. אבל החלטתי לתמוך בלומד אברך בכולל שערי מרדכי. ממש בהתחלה, לא ראיתי שום שינוי. אבל בשנה הראשונה, הוכנסו לי שלושה לקוחות חדשים — כל אחד בנפרד, בדרך פלאית. בשנה השנייה, עסקיי גדלו בחצי. בשנה השלישית, עסקיי כמעט התכפלו. ואני יודע, בודאות שזו ברכת המעשר שלי, ברכת התמיכה שלי בתורה."
+            <p style="margin-top: 1rem; color: #0e1c36; font-style: normal;"><strong>— מיוסף י., סוחר מירושלים</strong></p>
+        </div>
+        
+        <div class="guarantee">
+            <h3>🌟 הבטחה של ערי חכמים</h3>
+            <p>כל מי שתומך בתורה, גם בקושי, גם כשלא יש — זוכה לברכה שלא חקוק בדין, אלא בהבטחת קדומים. אלו שמחזיקים בתורה הם משתתפים בחיי העולם הבא עצמו.</p>
+        </div>
+        
+        <div class="cta-section">
+            <h2>בואו נהיה שותפים</h2>
+            <p>אם אתה מעוניין להפוך ללומד שותף, להחזיק בלומד אברך, או לתמוך בכולל מסוים — יש לנו תפקיד עבורך בקהילת המחזיקים שלנו.</p>
+            <div class="cta-buttons">
+                <a href="/hachzakat-avrech" class="btn btn-primary">הפוך ללומד שותף</a>
+                <a href="/contact" class="btn btn-secondary">שאל עוד</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>כולל שערי מרדכי | רחוב רשב"ם 8, ירושלים</p>
+        <p>📞 02-3204296 | 💬 054-844-2297</p>
+        <p>✉️ <a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">© 2026 כולל שערי מרדכי | <a href="/privacy">מדיניות פרטיות</a> | <a href="/negishut">נגישות</a></p>
+    </footer>
+</body>
+</html>
