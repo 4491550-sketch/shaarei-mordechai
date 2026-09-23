@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לימוד תורה לעילוי נשמה | הקדשה בכולל</title>
+    <meta name="description" content="הקדישו לימוד תורה לעילוי נשמת יקיריכם והיו שותפים בקול התורה. מידע על אופן ההקדשה והעברת השמות לכולל">
+    <meta name="theme-color" content="#0e1c36">
+    <link rel="canonical" href="https://shaareimordechai.co.il/hakdasha-layom">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --ink: #0e1c36;
+            --gold: #c29a45;
+            --gold-light: #e8c78e;
+            --parchment: #f8f3e8;
+            --muted: #6b7280;
+            --text: #1f2937;
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f5f3ee; color: var(--text); line-height: 1.6; }
+        header { background: var(--ink); color: #fff; padding: 2rem 1.5rem; text-align: center; }
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.05rem; opacity: 0.9; }
+        .breadcrumb { background: rgba(194, 154, 69, 0.1); padding: 0.75rem 1.5rem; font-size: 0.95rem; }
+        .breadcrumb a { color: var(--gold); text-decoration: none; }
+        .breadcrumb a:hover { text-decoration: underline; }
+        main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+        section { background: #fff; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(14, 28, 54, 0.08); }
+        h2 { color: var(--ink); font-size: 1.75rem; margin-bottom: 1rem; border-bottom: 3px solid var(--gold); padding-bottom: 0.5rem; }
+        h3 { color: var(--ink); font-size: 1.25rem; margin: 1.5rem 0 0.75rem; }
+        p { margin-bottom: 1rem; }
+        .info-box { background: linear-gradient(135deg, rgba(194, 154, 69, 0.08), rgba(248, 243, 232, 0.5)); border-right: 4px solid var(--gold); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem; }
+        .info-box strong { color: var(--ink); }
+        .form-section { background: var(--parchment); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        label { display: block; font-weight: 700; color: var(--ink); font-size: 0.98rem; margin-bottom: 0.5rem; }
+        label em { font-style: normal; color: #9a3b1f; }
+        input, textarea { width: 100%; font: inherit; font-size: 1.05rem; padding: 0.75rem 1rem; border: 2px solid #d9cba8; border-radius: 8px; background: #fff; color: var(--ink); }
+        input:focus, textarea:focus { border-color: var(--gold); outline: none; }
+        textarea { resize: vertical; min-height: 100px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0.75rem 0 0; border: 0; padding: 0; }
+        .chips legend { font-weight: 700; color: var(--ink); font-size: 0.98rem; margin-bottom: 0.5rem; width: 100%; }
+        .chips input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+        .chips label { display: inline-flex; margin: 0; font-weight: 600; cursor: pointer; }
+        .chips span { border: 1.5px solid #d9cba8; border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.95rem; background: #fff; display: inline-flex; align-items: center; }
+        .chips input:checked + span { background: var(--ink); color: var(--gold-light); border-color: var(--ink); }
+        .checkbox-group { display: flex; align-items: flex-start; gap: 0.75rem; }
+        .checkbox-group input[type="checkbox"] { width: 20px; height: 20px; min-height: 0; margin-top: 2px; flex-shrink: 0; accent-color: var(--ink); cursor: pointer; }
+        .checkbox-group label { margin-bottom: 0; font-weight: 600; }
+        .ded { background: #fff; border: 1.5px solid #e6d9b8; border-radius: 10px; padding: 1rem; margin-top: 1rem; }
+        .ded-sub { font-size: 0.9rem; color: var(--muted); margin: 0.5rem 0 0; line-height: 1.5; }
+        .hp { position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; }
+        .consent { display: flex; align-items: flex-start; gap: 0.75rem; font-weight: 600; font-size: 0.95rem; line-height: 1.55; cursor: pointer; margin: 1rem 0 0; }
+        .consent input { width: 20px; height: 20px; min-height: 0; margin-top: 2px; flex-shrink: 0; }
+        .priv { font-size: 0.9rem; color: var(--muted); margin: 1rem 0 0; line-height: 1.6; }
+        .priv a { color: var(--gold); text-decoration: none; }
+        .priv a:hover { text-decoration: underline; }
+        .err { color: #b3261e; font-weight: 700; margin: 1rem 0 0; min-height: 1.2em; font-size: 0.98rem; }
+        .btn { display: inline-block; background: var(--ink); color: #fff; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 1rem; border: 0; cursor: pointer; transition: all 0.3s ease; }
+        .btn:hover { background: var(--gold); color: var(--ink); }
+        .btn.go { width: 100%; padding: 1rem; font-size: 1.1rem; margin-top: 1rem; }
+        .skip-d { text-align: center; font-size: 0.95rem; margin: 1rem 0 0; }
+        .skip-d a { color: var(--muted); text-decoration: none; }
+        .skip-d a:hover { color: var(--gold); }
+        .form-done { text-align: center; padding: 2rem 1rem; display: none; }
+        .form-done.show { display: block; }
+        .form-done .ok { width: 60px; height: 60px; border-radius: 50%; background: var(--ink); color: var(--gold-light); display: grid; place-items: center; font-size: 2rem; margin: 0 auto 1rem; }
+        .form-done h3 { border: 0; padding: 0; }
+        .internal-links { background: #f0ebe0; padding: 1.5rem; border-radius: 10px; margin: 2rem 0; }
+        .internal-links h4 { color: var(--ink); font-size: 1.1rem; margin-bottom: 1rem; }
+        .internal-links ul { list-style: none; }
+        .internal-links li { margin-bottom: 0.75rem; }
+        .internal-links a { color: var(--gold); text-decoration: none; font-weight: 600; }
+        .internal-links a:hover { text-decoration: underline; }
+        footer { background: var(--ink); color: #fff; padding: 2rem 1.5rem; text-align: center; margin-top: 3rem; }
+        footer p { margin-bottom: 0.75rem; }
+        footer a { color: var(--gold-light); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.4rem; }
+            main { padding: 1rem; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>הקדשת יום לימוד</h1>
+        <p>הקדישו לימוד תורה לעילוי נשמת יקיריכם</p>
+    </header>
+
+    <nav class="breadcrumb">
+        <a href="/">דף הבית</a> / <a href="/kollelim">הכוללים שלנו</a> / הקדשת יום
+    </nav>
+
+    <main>
+        <section>
+            <h2>הקדשת יום לימוד — מה זה?</h2>
+            <p>הקדשת יום לימוד היא אחד מהדרכים המשמעותיות ביותר להיות שותף בתורה ובקדשת הכולל.</p>
+            <p>כאשר אתם מקדישים יום שלם של לימוד תורה לזכות של אדם או לעילוי נשמתו, אתם מביאים לידי מעשה את הרעיון היקר בעם ישראל: "זבולון יישב בחופי ים" — כלומר, הזבולונים תומכים בלומדים כדי שהם יוכלו להישמר בתורה.</p>
+            
+            <div class="info-box">
+                <strong>💎 כוחו של המעשה:</strong>
+                <p style="margin-top: 0.75rem;">כל יום קדוש שנלמד בכולל שלנו הוא לימוד אינטנסיבי בהלכה, גמרא ופוסקים. כשאתם מקדישים יום כזה, כל השעות של הלימוד מוקדשות לכוונה שלכם — לרפואה, לעילוי נשמה, או לכל טוב שאתם מבקשים.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>למה להקדיש יום?</h2>
+            
+            <h3>⭐ זה לא רק תרומה — זה שותפות</h3>
+            <p>כשאתם מקדישים יום, אתם נכנסים לממשק עמוק עם קול התורה. האברכים שלנו לומדים בשמכם, לזכותכם, לרפואתכם.</p>
+            
+            <h3>⭐ הקדשה בעילוי נשמה</h3>
+            <p>אם מקדישים לעילוי נשמת יקיר, הלימוד הוא כמו תפילה נמשכת כל היום. כל דף שנלמד, כל שאלה שנשאלת בכיתה — הכל מוקדש לעלוי נשמתו.</p>
+            
+            <h3>⭐ ערך כלכלי ורוחני</h3>
+            <p>הקדשת יום כוללת את כל הוצאות הכולל ליום שלם: משכורת המורים, חומרי לימוד, מקום, אור וחום. אתם מיחסים את כל זה לשם הנצחון או לרפואה או להצלחה.</p>
+        </section>
+
+        <section>
+            <h2>הקדישו יום — עכשיו</h2>
+            
+            <div class="form-section">
+                <form id="hakdashaForm" novalidate>
+                    <!-- סוג ההקדשה -->
+                    <fieldset class="chips form-group">
+                        <legend>סוג ההקדשה <em aria-hidden="true">*</em></legend>
+                        <label><input type="radio" name="hakdashaType" value="על שמי" required><span>על שמי</span></label>
+                        <label><input type="radio" name="hakdashaType" value="לזכות"><span>לזכות</span></label>
+                        <label><input type="radio" name="hakdashaType" value="לעילוי נשמת"><span>לעילוי נשמת</span></label>
+                    </fieldset>
+
+                    <!-- שם הנתורם -->
+                    <div class="form-group">
+                        <label for="hakdashaName">שם התורם <em aria-hidden="true">*</em></label>
+                        <input id="hakdashaName" name="fullName" required maxlength="60" autocomplete="name">
+                    </div>
+
+                    <!-- טלפון -->
+                    <div class="form-group">
+                        <label for="hakdashaPhone">טלפון נייד <em aria-hidden="true">*</em></label>
+                        <input id="hakdashaPhone" name="phone" type="tel" inputmode="tel" required maxlength="20" autocomplete="tel" dir="ltr">
+                    </div>
+
+                    <!-- דוא"ל -->
+                    <div class="form-group">
+                        <label for="hakdashaEmail">דוא״ל</label>
+                        <input id="hakdashaEmail" name="email" type="email" maxlength="80" autocomplete="email" dir="ltr">
+                    </div>
+
+                    <!-- רחוב -->
+                    <div class="form-group">
+                        <label for="hakdashaStreet">רחוב ומספר בית <em aria-hidden="true">*</em></label>
+                        <input id="hakdashaStreet" name="street" required maxlength="80" autocomplete="address-line1">
+                    </div>
+
+                    <!-- עיר -->
+                    <div class="form-group">
+                        <label for="hakdashaCity">עיר <em aria-hidden="true">*</em></label>
+                        <input id="hakdashaCity" name="city" required maxlength="40" autocomplete="address-level2">
+                    </div>
+
+                    <!-- מספר ימים -->
+                    <div class="form-group">
+                        <label for="hakdashaDays">כמה ימים להקדיש? <em aria-hidden="true">*</em></label>
+                        <fieldset class="chips">
+                            <label><input type="radio" name="hakdashaDays" value="יום אחד" required><span>יום אחד</span></label>
+                            <label><input type="radio" name="hakdashaDays" value="שלושה ימים"><span>שלושה ימים</span></label>
+                            <label><input type="radio" name="hakdashaDays" value="שבוע"><span>שבוע</span></label>
+                            <label><input type="radio" name="hakdashaDays" value="חודש"><span>חודש</span></label>
+                            <label><input type="radio" name="hakdashaDays" value="כמות אחרת"><span>כמות אחרת</span></label>
+                        </fieldset>
+                    </div>
+
+                    <!-- שם למטרה -->
+                    <div class="ded form-group">
+                        <label class="checkbox-group">
+                            <input type="checkbox" id="jHakOn"> 
+                            <span>יש שם שאני רוצה להקדיש עבורו</span>
+                        </label>
+                        <p class="ded-sub">האברכים יזכימו את השם בלימוד, והוא יהיה חלק מן ההקדשה.</p>
+                        <div id="jHakBox" hidden>
+                            <fieldset class="chips" style="margin: 1rem 0;">
+                                <legend>ההקדשה היא: <em aria-hidden="true">*</em></legend>
+                                <label><input type="radio" name="hakdashaIntention" value="לזכות" required><span>לזכות</span></label>
+                                <label><input type="radio" name="hakdashaIntention" value="לרפואה שלמה"><span>לרפואה שלמה</span></label>
+                                <label><input type="radio" name="hakdashaIntention" value="להצלחה"><span>להצלחה</span></label>
+                                <label><input type="radio" name="hakdashaIntention" value="לזיווג הגון"><span>לזיווג הגון</span></label>
+                                <label><input type="radio" name="hakdashaIntention" value="לעילוי נשמת"><span>לעילוי נשמת</span></label>
+                            </fieldset>
+                            <label for="jHakNames">שם / שמות</label>
+                            <textarea id="jHakNames" name="hakdashaNames" maxlength="500" placeholder="לדוגמה: משה בן שרה"></textarea>
+                            <p class="ded-sub">נהוג לכתוב שם ושם האם.</p>
+                        </div>
+                    </div>
+
+                    <!-- הערות -->
+                    <div class="form-group">
+                        <label for="hakdashaNotes">הערות נוספות</label>
+                        <textarea id="hakdashaNotes" name="notes" maxlength="500" placeholder="משהו שחשוב לכם שנדע?"></textarea>
+                    </div>
+
+                    <!-- Honeypot -->
+                    <div class="hp" aria-hidden="true">
+                        <label for="jWeb">אתר</label>
+                        <input id="jWeb" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- Consent -->
+                    <label class="consent">
+                        <input type="checkbox" name="marketingConsent" value="כן">
+                        <span>אני מסכים/ה לקבל מרשת כוללים שערי מרדכי עדכונים, הזמנות ובקשות תרומה בדוא״ל, ב-SMS או בוואטסאפ. אפשר לבטל בכל עת.</span>
+                    </label>
+
+                    <!-- Privacy -->
+                    <p class="priv">השדות המסומנים ב־* הם חובה. הפרטים משמשים את רשת כוללים שערי מרדכי ליצירת קשר ולשליחת עדכונים, כמפורט <a href="/privacy">במדיניות הפרטיות</a>.</p>
+
+                    <!-- Error -->
+                    <p class="err" id="hakdashaErr" role="alert"></p>
+
+                    <!-- Submit -->
+                    <button type="submit" class="btn go"><span aria-hidden="true">🤲 </span>הקדישו יום</button>
+
+                    <p class="skip-d">
+                        או <a href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" target="_blank" rel="noopener">לכו ישירות לדף התרומה<span class="sr-only"> (נפתח בחלון חדש)</span></a>
+                    </p>
+                </form>
+
+                <div class="form-done" id="hakdashaFormDone">
+                    <div class="ok" aria-hidden="true">✓</div>
+                    <h3>תודה! ההקדשה נקלטה</h3>
+                    <p>הפרטים הגיעו לאברכים, והם יקדישו את הלימוד בכוונתכם.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>מה קורה אחרי?</h2>
+            
+            <h3>1️⃣ קבלת אישור</h3>
+            <p>תקבלו הודעת WhatsApp או SMS עם אישור ההקדשה ופרטי התחייבותנו.</p>
+            
+            <h3>2️⃣ לימוד ודיווח</h3>
+            <p>בימי ההקדשה, האברכים יעבדו בהדר ובהתעמקות בלימוד. בסיום התקופה, תקבלו דיווח על מה שנלמד ותמונות מבית המדרש.</p>
+            
+            <h3>3️⃣ הכרה ודברי תורה</h3>
+            <p>השם שלכם (או של האדם שמקדישים עבורו) יוזכר בחגיגה או בדף הוקרה מיוחד של הכולל.</p>
+        </section>
+
+        <section class="internal-links">
+            <h4>עוד עמודים בקשר</h4>
+            <ul>
+                <li><a href="/">דף הבית</a></li>
+                <li><a href="/kollelim">הכוללים שלנו</a></li>
+                <li><a href="/hachzakat-avrech">החזקת אברך</a></li>
+                <li><a href="/about">אודות כולל שערי מרדכי</a></li>
+                <li><a href="/yissachar-zevulun">שותפים — יששכר וזבולון</a></li>
+                <li><a href="/hachzakat-torah">החזקת תורה</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>רשת כוללים שערי מרדכי</strong></p>
+        <p>טלפון: <strong>054-844-2297</strong> | דוא״ל: <strong><a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></strong></p>
+        <p>רחוב רשב"ם 8, ירושלים</p>
+        <p style="margin-top: 1.5rem; font-size: 0.9rem;">
+            <a href="/privacy">מדיניות פרטיות</a> | 
+            <a href="/negishut">הנגשת אתר</a>
+        </p>
+    </footer>
+
+    <script>
+        const hakdashaForm = document.getElementById('hakdashaForm');
+        const jHakOn = document.getElementById('jHakOn');
+        const jHakBox = document.getElementById('jHakBox');
+        const hakdashaErr = document.getElementById('hakdashaErr');
+        const hakdashaFormDone = document.getElementById('hakdashaFormDone');
+
+        jHakOn.addEventListener('change', () => {
+            jHakBox.hidden = !jHakOn.checked;
+            if (jHakOn.checked) {
+                document.querySelector('input[name="hakdashaIntention"]').required = true;
+            }
+        });
+
+        hakdashaForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            hakdashaErr.textContent = '';
+
+            const formData = new FormData(hakdashaForm);
+            const website = formData.get('website');
+            
+            if (website) {
+                hakdashaErr.textContent = 'שגיאה בשליחה. נסו שוב.';
+                return;
+            }
+
+            if (jHakOn.checked && !formData.get('hakdashaIntention')) {
+                hakdashaErr.textContent = 'בחרו סוג הקדשה.';
+                return;
+            }
+
+            try {
+                await fetch('https://script.google.com/macros/d/1f7_z-zKNpCvJhfg_REuGREOj5s2E5aJuN2eKzOhN4Pw/usercaller?entry.', {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: new URLSearchParams({
+                        'entry.1234567890': formData.get('fullName'),
+                        'entry.1234567891': formData.get('phone'),
+                        'entry.1234567892': formData.get('email'),
+                        'entry.1234567893': formData.get('street'),
+                        'entry.1234567894': formData.get('city'),
+                        'entry.1234567895': formData.get('hakdashaType'),
+                        'entry.1234567896': formData.get('hakdashaDays'),
+                        'entry.1234567897': formData.get('hakdashaIntention') || 'לא',
+                        'entry.1234567898': formData.get('hakdashaNames') || '',
+                        'entry.1234567899': formData.get('notes') || '',
+                        'entry.1234567900': formData.get('marketingConsent') || 'לא'
+                    })
+                });
+
+                hakdashaForm.hidden = true;
+                hakdashaFormDone.classList.add('show');
+                window.scrollTo(0, 0);
+            } catch (error) {
+                hakdashaErr.textContent = 'שגיאה בשליחה. בדקו את החיבור ונסו שוב.';
+            }
+        });
+    </script>
+</body>
+</html>
