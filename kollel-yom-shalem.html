@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="כולל יום שלם לאברכים מצטיינים בלימוד הלכה למעשה עיוני. פעיל מ-9 בבוקר עד 6 בערב בירושלים.">
+    <meta name="keywords" content="כולל, לימוד תורה, הלכה, אברכים, ירושלים, כולל יום שלם">
+    <meta property="og:title" content="כולל יום שלם | שערי מרדכי">
+    <meta property="og:description" content="כולל יום שלם לאברכים מצטיינים בלימוד הלכה למעשה עיוני">
+    <meta property="og:url" content="https://shaareimordechai.co.il/kollel-yom-shalem">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://shaareimordechai.co.il/kollel-yom-shalem">
+    <title>כולל יום שלם | כולל שערי מרדכי</title>
+    <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Assistant:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { scroll-padding-top: env(safe-area-inset-top, 0px); padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+        body { 
+            font-family: 'Assistant', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #f8f3e8;
+        }
+        header {
+            background: linear-gradient(135deg, #0e1c36 0%, #1a2d4f 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid #c29a45;
+        }
+        header h1 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 1.5rem;
+        }
+        .breadcrumb a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .hero {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            border-right: 4px solid #c29a45;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .hero h2 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 1.8rem;
+            color: #0e1c36;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.05rem;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .info-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .info-item {
+            border-right: 3px solid #c29a45;
+            padding-right: 1rem;
+        }
+        .info-item strong {
+            display: block;
+            color: #0e1c36;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .info-item span { color: #555; }
+        .content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .content h3 {
+            font-family: 'Frank Ruhl Libre', serif;
+            font-size: 1.5rem;
+            color: #0e1c36;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        .content h3:first-child { margin-top: 0; }
+        .content p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        .content ul {
+            list-style: none;
+            margin-bottom: 1.2rem;
+            margin-right: 1.5rem;
+        }
+        .content li {
+            margin-bottom: 0.8rem;
+            padding-right: 1.5rem;
+            position: relative;
+        }
+        .content li:before {
+            content: "•";
+            color: #c29a45;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, #0e1c36 0%, #1a2d4f 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .cta-section h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #c29a45;
+            color: #0e1c36;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #d4b158;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(194, 154, 69, 0.3);
+        }
+        .internal-links {
+            background: #f0ebe0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-right: 3px solid #c29a45;
+        }
+        .internal-links h4 {
+            color: #0e1c36;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .internal-links ul {
+            list-style: none;
+            margin: 0;
+        }
+        .internal-links li {
+            margin-bottom: 0.6rem;
+        }
+        .internal-links a {
+            color: #0e1c36;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        .internal-links a:hover {
+            color: #c29a45;
+            text-decoration: underline;
+        }
+        footer {
+            background: #0e1c36;
+            color: white;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            margin-top: 3rem;
+            border-top: 3px solid #c29a45;
+        }
+        footer p { margin-bottom: 0.8rem; }
+        footer strong { color: #c29a45; }
+        footer a {
+            color: #c29a45;
+            text-decoration: none;
+        }
+        footer a:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .info-box { grid-template-columns: 1fr; }
+            .container { padding: 1rem; }
+            .hero, .content { padding: 1.5rem; }
+            .cta-button { display: block; margin: 0.5rem 0; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="breadcrumb">
+            <a href="https://shaareimordechai.co.il/">בית</a> / כולל יום שלם
+        </div>
+        <h1>כולל יום שלם</h1>
+        <p>כולל לאברכים מצטיינים בלימוד הלכה למעשה עיוני</p>
+    </header>
+
+    <div class="container">
+        <nav class="internal-links">
+            <h4>עמודים קשורים:</h4>
+            <ul>
+                <li><a href="https://shaareimordechai.co.il/">דף הבית</a></li>
+                <li><a href="https://shaareimordechai.co.il/kollelim">כל הכוללים</a></li>
+                <li><a href="https://shaareimordechai.co.il/hachzakat-avrech">החזקת אברך</a></li>
+                <li><a href="https://shaareimordechai.co.il/about">אודות כולל שערי מרדכי</a></li>
+            </ul>
+        </nav>
+
+        <section class="hero">
+            <h2>כולל יום שלם לאברכים מצטיינים</h2>
+            <p>כולל יום שלם של כוללי שערי מרדכי פועל בירושלים לשירות אברכים מצטיינים המבקשים להעמיק בלימוד הלכה למעשה עם התמקדות בעיוני ופרקטי. הכולל מייצג את ערך הלימוד העמוק והמשמעותי בשרות התורה.</p>
+        </section>
+
+        <section class="info-box">
+            <div class="info-item">
+                <strong>שעות הלימוד</strong>
+                <span>מ-9:00 בבוקר עד 18:00 בערב<br>יום שלם של התקדשות לתורה</span>
+            </div>
+            <div class="info-item">
+                <strong>מיקום הכולל</strong>
+                <span>רחוב רשב"ם 8<br>ירושלים</span>
+            </div>
+        </section>
+
+        <section class="content">
+            <h3>מהות הכולל</h3>
+            <p>כולל יום שלם הינו מוסד לימודי המתמקד בהעמקת הידע בהלכה למעשה ובעיונים יסודיים בתורה. הכולל משמש כמרכז למחקר ולימוד מעמיק של דברי חכמים, מעבר לשיעורים הקונבנציונליים. כל אברך במוסד זה מקבל הזדמנות ללמוד בצורה אישית ומעמיקה, תוך שמירה על רמה גבוהה של התמדה ויסוד.</p>
+
+            <h3>ערך הלימוד בכולל</h3>
+            <p>בכולל יום שלם, הלימוד אינו שגרתי, אלא כמנהג עמוק של התקדשות. האברכים מקדישים את כל יום הלימוד (כ-9 שעות ללא הפסקה משמעותית) לעיון בהלכה, דיונים עם חברים בלימוד וקבלת הדרכה מן הראשים המנחים. הגישה הינה להעמיק בהבנה של מקורות הלכתיים ולהביא אותם לידי מעשה בעדכניות.</p>
+
+            <h3>הלכה למעשה עיוני</h3>
+            <p>הכולל מתפקד כמרכז לסקר ודיון בנושאים עכשוויים של הלכה למעשה. האברכים לומדים כיצד ליישם את דברי התורה והחכמים בחיים המעשיים של המקבל, תוך הבנה עמוקה של ההנמקות ההלכתיות. זה עוזר לפתח חכמים ומורים עתידיים, המסוגלים להיות הנחיות לציבור בשאלות הלכתיות מורכבות.</p>
+
+            <h3>קהילת האברכים</h3>
+            <p>בכולל יום שלם, יש קהילה קטנה של אברכים שנבחרו בזהירות על פי הצטיינות ותלהבות. זה יוצר סביבה של חברות, תמיכה ויעוץ הדדי בעת הלימוד. כל אברך זוכה להיות חלק מקהילה של לומדים אמיתיים ומסורים, מה שמחזק את מחויבותו ללימוד מעמיק.</p>
+
+            <h3>תמיכה ואחזקה</h3>
+            <p>כוללי שערי מרדכי מציעים תמיכה כלכלית לאברכים להם אנו משמרים את דמותם. התמיכה זו מאפשרת לאברכים להתמקד כל ימם בלימוד ללא דאגות כלכליות. האתחזוקה נועדה להיות מענה הולם לצרכי חיי האברך ומשפחתו.</p>
+
+            <h3>הצטרפות והקדשות</h3>
+            <p>אם אתה מעוניין להיות שותף בתמיכה בכולל או להקדיש לימוד לזכרון יקיר, אנו עומדים לשירותך. כל תרומה, קטנה או גדולה, משמעותית ותורמת ישירות להחזקה וללימוד של אברכי הכולל.</p>
+        </section>
+
+        <section class="cta-section">
+            <h3>להיות שותף בתמיכה בכולל</h3>
+            <p>הצטרף לנו בתמיכה בלימוד ובהחזקה של אברכים מסורים בכולל יום שלם</p>
+            <a href="https://www.matara.pro/nedarimplus/online/?mosad=7014763" class="cta-button">תרומה עכשיו</a>
+            <a href="https://shaareimordechai.co.il/hachzakat-avrech" class="cta-button">למידע על תמיכה באברך</a>
+        </section>
+
+        <section class="internal-links">
+            <h4>כוללים נוספים בשערי מרדכי:</h4>
+            <ul>
+                <li><a href="https://shaareimordechai.co.il/kollel-chatzi-yom-sanhedria">כולל חצי יום סנהדריה</a></li>
+                <li><a href="https://shaareimordechai.co.il/kollel-chatzot">כולל תיקון חצות</a></li>
+                <li><a href="https://shaareimordechai.co.il/kollel-purim">כולל ליל פורים</a></li>
+                <li><a href="https://shaareimordechai.co.il/kollelim">כל הכוללים</a></li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>כולל יום שלם</strong> | כוללי שערי מרדכי</p>
+        <p>רחוב רשב"ם 8, ירושלים</p>
+        <p>טלפון: <strong>054-844-2297</strong> | דוא"ל: <strong><a href="mailto:yr@5377177.co.il">yr@5377177.co.il</a></strong></p>
+        <p style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid #333; font-size: 0.9rem;">
+            © 2026 כולל אברכים שערי מרדכי | <a href="https://shaareimordechai.co.il/privacy">מדיניות פרטיות</a> | <a href="https://shaareimordechai.co.il/negishut">הצהרת נגישות</a>
+        </p>
+    </footer>
+</body>
+</html>
