@@ -146,7 +146,7 @@
   .c-name{position:absolute;left:25.5%;right:24.5%;bottom:57.4%;text-align:center;font-family:var(--serif);font-weight:900;color:#1d2f57;font-size:clamp(.8rem,4cqw,1.45rem);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 0 rgba(255,255,255,.5)}
   .c-name small{font-weight:500;font-size:.72em;color:#5a4a26;margin-inline-end:.3em}
   .c-name.empty{color:rgba(29,47,87,.35);font-weight:500;font-style:italic}
-  .c-name2{position:absolute;left:25.5%;right:24.5%;bottom:53.9%;text-align:center;font-family:var(--serif);font-weight:700;color:#1d2f57;font-size:clamp(.6rem,2.9cqw,1.1rem);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 0 rgba(255,255,255,.5)}
+  .c-name2{border-bottom:2px solid rgb(66,100,111);padding-bottom:.12em;position:absolute;left:25.5%;right:24.5%;bottom:52.6%;text-align:center;font-family:var(--serif);font-weight:700;color:#1d2f57;font-size:clamp(.6rem,2.7cqw,1rem);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-shadow:0 1px 0 rgba(255,255,255,.5)}
   .c-name2:empty{display:none}
   .c-date{position:absolute;left:20.4%;width:22%;bottom:22.3%;text-align:center;font-family:var(--serif);font-weight:700;color:#1d2f57;font-size:clamp(.6rem,2.5cqw,.9rem);white-space:nowrap}
   .cert{container-type:inline-size}
@@ -340,7 +340,7 @@
       <div class="cert-stage">
         <button type="button" class="cert" id="cert" aria-label="הגדלת תעודת השותפות לדוגמה">
           <span class="cert-badge" aria-hidden="true">לדוגמה</span>
-          <picture><source srcset="/images/teudat-shutfut.webp?v=2" type="image/webp"><img src="/images/teudat-shutfut.jpg?v=2" width="989" height="1425" alt="תעודת שותפות יששכר וזבולון של כולל שערי מרדכי: מסגרת זהב מעוטרת בעמודים, הפסוק ׳שמח זבולון בצאתך ויששכר באהליך׳, שורה לשם התורם, ברכה וחתימת ראש הכולל" loading="lazy" decoding="async"></picture>
+          <picture><source srcset="/images/teudat-shutfut.webp?v=3" type="image/webp"><img src="/images/teudat-shutfut.jpg?v=3" width="989" height="1425" alt="תעודת שותפות יששכר וזבולון של כולל שערי מרדכי: מסגרת זהב מעוטרת בעמודים, הפסוק ׳שמח זבולון בצאתך ויששכר באהליך׳, שורה לשם התורם, ברכה וחתימת ראש הכולל" loading="lazy" decoding="async"></picture>
           <span class="c-name empty" id="cName" aria-hidden="true">כאן יופיע שמכם</span>
           <span class="c-name2" id="cName2" aria-hidden="true"></span>
           <span class="c-date" id="cDate" aria-hidden="true"></span>
@@ -356,8 +356,9 @@
         <div class="try">
           <label for="certInput">נסו עכשיו, הקלידו שם וראו את התעודה שלכם</label>
           <input id="certInput" type="text" maxlength="40" autocomplete="name" placeholder="לדוגמה: משה בן שרה">
-          <label for="certInput2">לעילוי נשמת (אופציונלי)</label>
+          <label for="certInput2">שורה נוספת בתעודה (אופציונלי)</label>
           <input id="certInput2" type="text" maxlength="40" autocomplete="off" placeholder="לדוגמה: אברהם בן שרה">
+          <fieldset class="chips"><legend>הכיתוב בשורה הנוספת:</legend><label><input type="radio" name="certFor2" value="לעילוי נשמת" checked><span>לעילוי נשמת</span></label><label><input type="radio" name="certFor2" value="לרפואה שלמה"><span>לרפואה שלמה</span></label><label><input type="radio" name="certFor2" value="להצלחת"><span>להצלחת</span></label></fieldset>
           <fieldset class="chips">
             <legend>השותפות היא:</legend>
             <label><input type="radio" name="certFor" value="" checked><span>על שמי</span></label>
@@ -396,7 +397,8 @@
   }
   inp.addEventListener('input',render);
   var inp2=document.getElementById('certInput2'),nm2=document.getElementById('cName2');
-  if(inp2&&nm2)inp2.addEventListener('input',function(){var v=inp2.value.trim();nm2.textContent=v?'לעילוי נשמת '+v:'';});
+  function r2(){var v=inp2.value.trim(),c=document.querySelector('input[name=certFor2]:checked'),f=c?c.value:'לעילוי נשמת';nm2.textContent=v?f+' '+v:'';}
+  if(inp2&&nm2){inp2.addEventListener('input',r2);document.querySelectorAll('input[name=certFor2]').forEach(function(r){r.addEventListener('change',r2)});}
   document.querySelectorAll('input[name=certFor]').forEach(function(r){r.addEventListener('change',render)});
   if(!reduce){
     cert.addEventListener('pointermove',function(e){if(e.pointerType!=='mouse')return;var b=cert.getBoundingClientRect(),x=(e.clientX-b.left)/b.width-.5,y=(e.clientY-b.top)/b.height-.5;cert.style.setProperty('--ry',(x*14)+'deg');cert.style.setProperty('--rx',(-y*10)+'deg');});
@@ -430,7 +432,8 @@
         <label><input type="radio" name="tier" value="החזקת מסגרת לימוד"><span>החזקת מסגרת לימוד</span></label>
       </fieldset>
       <div class="full"><label for="jCert">השם שיופיע על התעודה <em aria-hidden="true">*</em></label><input id="jCert" name="certName" required maxlength="60" autocomplete="off"></div>
-      <div class="full"><label for="jMem">לעילוי נשמת (אופציונלי)</label><input id="jMem" name="certMemorial" maxlength="60" autocomplete="off"></div>
+      <div class="full"><label for="jMem">שורה נוספת בתעודה (אופציונלי)</label><input id="jMem" name="certMemorial" maxlength="60" autocomplete="off"></div>
+      <fieldset class="chips"><legend>הכיתוב בשורה הנוספת:</legend><label><input type="radio" name="certMemorialType" value="לעילוי נשמת" checked><span>לעילוי נשמת</span></label><label><input type="radio" name="certMemorialType" value="לרפואה שלמה"><span>לרפואה שלמה</span></label><label><input type="radio" name="certMemorialType" value="להצלחת"><span>להצלחת</span></label></fieldset>
       <fieldset class="chips">
         <legend>השותפות היא:</legend>
         <label><input type="radio" name="certFor" value="על שמי" checked><span>על שמי</span></label>
@@ -526,8 +529,8 @@
     if(!valid())return;
     var w=window.open(DONATE,'_blank','noopener');
     var data=new URLSearchParams(new FormData(form));
-    var mem=(data.get('certMemorial')||'').trim();data.delete('certMemorial');
-    if(mem)data.set('certName',(data.get('certName')||'')+' (לעילוי נשמת: '+mem+')');
+    var mem=(data.get('certMemorial')||'').trim(),mt=data.get('certMemorialType')||'לעילוי נשמת';data.delete('certMemorial');data.delete('certMemorialType');
+    if(mem)data.set('certName',(data.get('certName')||'')+' ('+mt+': '+mem+')');
     if(!dedOn.checked){data.delete('dedType');data.delete('dedNames');}
     data.append('page',location.pathname);
     if(ENDPOINT.indexOf('https://')===0){
